@@ -1,0 +1,5 @@
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/Maklerbuero/CSMaklerbuero/CSMaklerbuero/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/Maklerbuero/CSMaklerbuero/CSMaklerbuero/bin/Debug/CSMaklerbuero.exe.mdb
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/Maklerbuero/CSMaklerbuero/CSMaklerbuero/bin/Debug/CSMaklerbuero.exe
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/Maklerbuero/CSMaklerbuero/CSMaklerbuero/obj/x86/Debug/CSMaklerbuero.exe
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/Maklerbuero/CSMaklerbuero/CSMaklerbuero/obj/x86/Debug/CSMaklerbuero.exe.mdb

@@ -1,0 +1,5 @@
+E:\Schule\POS\20142015\Maklerbuero\CSMaklerbuero\CSMaklerbuero\bin\Debug\CSMaklerbuero.exe
+E:\Schule\POS\20142015\Maklerbuero\CSMaklerbuero\CSMaklerbuero\bin\Debug\CSMaklerbuero.pdb
+E:\Schule\POS\20142015\Maklerbuero\CSMaklerbuero\CSMaklerbuero\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Schule\POS\20142015\Maklerbuero\CSMaklerbuero\CSMaklerbuero\obj\x86\Debug\CSMaklerbuero.exe
+E:\Schule\POS\20142015\Maklerbuero\CSMaklerbuero\CSMaklerbuero\obj\x86\Debug\CSMaklerbuero.pdb

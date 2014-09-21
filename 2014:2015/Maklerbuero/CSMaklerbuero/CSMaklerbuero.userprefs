@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSMaklerbuero/Program.cs">
+    <Files>
+      <File FileName="CSMaklerbuero/Program.cs" Line="21" Column="15" />
+      <File FileName="CSMaklerbuero/Verwaltung/MenuClass.cs" Line="30" Column="43" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
