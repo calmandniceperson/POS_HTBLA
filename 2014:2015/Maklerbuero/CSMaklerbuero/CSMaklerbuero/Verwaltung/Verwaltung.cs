@@ -852,11 +852,11 @@ namespace CSMaklerbuero
         #region processing
         public bool procTKM(string t)
         {
-            if (temp == "1")
+            if (t == "1")
             {
                 return true;
             }
-            else if (temp == "2")
+            else if (t == "2")
             {
                 return true;
             }
