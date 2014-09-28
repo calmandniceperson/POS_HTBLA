@@ -1,62 +1,30 @@
-library Objekt;
-
 class Objekt{
   int objNr;
-  String agents_name;
-  bool typus_buyus_rentus;
-  double price;
-  double area_size;
+  String makler;
+  bool typus_kaufus_mietus;
+  double kosten;
+  double flaeche;
   
-  /*constructor*/
-  Objekt(int objnr, String an, bool tbr, double p, double as){
+  Objekt(int objnr, String m, bool tkm, double k, double f){
     objNr = objnr;
-    agents_name = an;
-    typus_buyus_rentus = tbr;
-    price = p;
-    area_size = as;
+    makler = m;
+    typus_kaufus_mietus = tkm;
+    kosten = k;
+    flaeche = f;
+    
+    void newObjekt(){
+      
+    }
+  }
+}
+
+class Wohnung extends Objekt{
+  int anz_zimmer;
+  bool bade_dusche;
+  Wohnung(int objnr, String m, bool tkm, double k, double f, int anz_z, bool db):super(objnr, m, tkm, k, f){
+    anz_zimmer = anz_z;
+    bade_dusche = db;
   }
   
-  /*GET*/
-  int getObjNr(){
-    return objNr;
-  }
   
-  String getAgentsName(){
-    return agents_name;
-  }
-  
-  bool getTBR(){
-    return typus_buyus_rentus;
-  }
-  
-  double getPrice(){
-    return price;
-  }
-  
-  double getAreaSize(){
-    return area_size;
-  }
-  /*GET*/
-  
-  /*SET*/
-  void setObjrNr(int v){
-    objNr = v;
-  }
-  
-  void setAgentsName(String v){
-    agents_name = v;
-  }
-  
-  void setTBR(bool v){
-    typus_buyus_rentus = v;
-  }
-  
-  void setPrice(double v){
-    price = v;
-  }
-  
-  void setAreaSize(double v){
-    area_size = v;
-  }
-  /*SET*/
 }

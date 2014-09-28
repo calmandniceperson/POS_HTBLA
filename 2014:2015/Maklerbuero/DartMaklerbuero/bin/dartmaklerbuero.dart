@@ -1,34 +1,15 @@
 import 'dart:io';
-import 'management/Management.dart';
-import 'management/MenuClass.dart';
-import 'management/Output.dart';
 
 void main() {
-  String ant;
-  MenuClass mc = new MenuClass();
-  Management m = new Management();
-  Output output = new Output();
-  
-  do{
-    
-    switch(mc.showMainMenu()){
-      case 1:
-        m.newObjekt();
-        break;
-      case 2:
-        break;
-      case 3:
-        break;
-      case 4:
-        output.printAll(m.getObjList());
-        break;
-      case 5:
-        break;
-      case 6:
-        break;
-    }
-    
-    stdout.write("Do you want to execute another action? (y/n)");
-    ant = stdin.readLineSync();
-  }while(ant.toLowerCase().startsWith("y"));
+  Objekt obj = new Objekt();
+  obj.newHouse();
+}
+
+class Objekt{
+  void newHouse(){
+    stdout.write('How much does the house cost?');
+    int kosten = int.parse(stdin.readLineSync());
+    stdout.write('What color does it have?');
+    String color = stdin.readLineSync();
+  }
 }
