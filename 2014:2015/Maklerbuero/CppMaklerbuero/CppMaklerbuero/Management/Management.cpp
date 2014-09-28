@@ -127,6 +127,22 @@ void Management::createNewObjekt(){
     }
 }
 
+/*void Management::deleteObjekt(const int v){
+    try{
+        for(Objekt oname: objVector){
+        
+            auto it = std::find(objVector.begin(), objVector.end(), oname); //search for objnr in vector
+        
+            auto pos = std::distance(objVector.begin(), it); // get distance between start of vector and element
+        
+            objVector.erase(objVector.begin() + pos);
+            
+        }
+    }catch(const std::exception &exc){
+        std::cerr << exc.what();
+    }
+}*/
+
 void Management::printResult(Objekt o){
     std::cout << "Object ID : " << std::to_string(o.getObjNr()) << std::endl;
     std::cout << "Agent's name: " << o.getAgent() << std::endl;
