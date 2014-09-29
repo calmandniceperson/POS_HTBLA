@@ -5,8 +5,7 @@ import '../classes/subclasses/House.dart';
 import '../classes/subclasses/Flat.dart';
 import '../classes/subclasses/Estate.dart';
 import '../management/Output.dart';
-
-//import '../classes/subclasses/House.dart' as house;
+import '../management/MenuClass.dart';
 import 'dart:io';
 
 class Management{
@@ -16,6 +15,7 @@ class Management{
   
   /*TEMPORARIES*/
   int tempint;
+  bool tempbool;
   String temp;
   Objekt tempobj;
   /*TEMPORARIES*/
@@ -145,6 +145,171 @@ class Management{
           output.printObjekt(tempobj);
         }
         break;
+    }
+  }
+  
+  void deleteObjekt(int onr){
+    objList.remove(getObjektByObjNr(onr));
+  }
+  
+  void editObjekt(int onr, MenuClass mc){
+    for(Objekt o in objList){
+      if(o.getObjNr() == onr){
+        switch(mc.showEditMenu(o)){
+          case 1: /*agents name*/
+            stdout.writeln("This currently responsible agent's name is " + o.getAgentsName() + ".");
+            stdout.write("Who's the new reponsible agent? (first name + last name)");
+            o.setAgentsName(stdin.readLineSync());
+            stdout.writeln("This object's new agent is " + o.getAgentsName() + ".");
+            break;
+          case 2: /*typus_buyus_rentus*/
+            if((tempbool = o.getTBR())){
+              stdout.writeln("This object is currently to be bought.");
+              stdout.write("Do you want the object to be rentable? (y/n) ");
+              if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                o.setTBR(false);
+                stdout.writeln("This object now is to be rented.");
+              }else{
+                stdout.writeln("This object remains to be bought.");
+              }
+            }else if(!tempbool){
+              stdout.writeln("This object is currently to be rented.");
+              stdout.write("Do you want the object to be buyable? (y/n) ");
+              if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                o.setTBR(true);
+                stdout.writeln("This object now is to be bought.");
+              }else{
+                stdout.writeln("This object remains to be rented.");
+              }
+            }
+            break;
+          case 3: /*price*/
+            stdout.writeln("This object's current price is " + o.getPrice().toString() + "€.");
+            stdout.write("Enter the object's new price: ");
+            o.setPrice(double.parse(stdin.readLineSync()));
+            stdout.writeln("This object's new price is " + o.getPrice().toString() + "€.");
+            break;
+          case 4: /*area size*/
+            stdout.writeln("This object's current area size is " + o.getAreaSize().toString() + "m^2.");
+            stdout.write("Enter the object's new area size: ");
+            o.setAreaSize(double.parse(stdin.readLineSync()));
+            stdout.writeln("This object's area size now is " + o.getAreaSize().toString() + "m^2.");
+            break;
+          case 5: /*(house) multifamily*/
+            if(o is House){
+              if((tempbool = o.getMultiFam())){
+                stdout.writeln("This house is a multifamily house.");
+                stdout.write("Do you want to change that? ");
+                if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                  o.setMultiFam(false);
+                  stdout.writeln("This how now is a single family house.");
+                }else{
+                  stdout.writeln("This house remains a multifamily house.");
+                }
+              }else if(!tempbool){
+                stdout.writeln("This house is not a multifamily house.");
+                stdout.write("Do you want to change that? (y/n) ");
+                if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                  o.setMultiFam(true);
+                  stdout.writeln("This house is now a multi family house");
+                }else{
+                  stdout.writeln("This house remains a single family house.");
+                }
+              }
+            }
+            break;
+          case 6: /*(house) floor_count*/
+            if(o is House){
+              stdout.writeln("This house has " + o.getFloorCount().toString() + " floors.");
+              stdout.write("What's the house's new number of floors? ");
+              o.setFloorCount(int.parse(stdin.readLineSync()));
+              stdout.writeln("This house now has " + o.getFloorCount().toString() + " floors.");
+            }
+            break;
+          case 7: /*(house) cellar*/
+            if(o is House){
+              if(o.getCellar()){
+                stdout.writeln("This house has a cellar.");
+                stdout.writeln("Do you want to change that? (y/n) ");
+                if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                  o.setCellar(false);
+                  stdout.writeln("This house now doesn't have a cellar anymore.");
+                }else{
+                  stdout.writeln("This house still has a cellar.");
+                }
+              }else if(!o.getCellar()){
+                stdout.writeln("This house doesn't have a cellar.");
+                stdout.writeln("Do you want to change that? (y/n) ");
+                if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                  o.setCellar(true);
+                  stdout.writeln("This house now has a cellar.");
+                }else{
+                  stdout.writeln("This house still has no cellar.");
+                }
+              }
+            }
+            break;
+          case 8: /*(flat) room_count*/
+            if(o is Flat){
+              stdout.writeln("This flat has " + o.getRoomCount().toString() + " rooms.");
+              stdout.write("What's the flat's new number of rooms? ");
+              o.setRoomCount(int.parse(stdin.readLineSync()));
+              stdout.writeln("This flat now has " + o.getRoomCount().toString() + " rooms.");
+            }
+            break;
+          case 9: /*(flat) bathtub/showercabin*/
+            if(o is Flat){
+              if(o.getBS()){
+                stdout.writeln("This flat includes a bathtub.");
+                stdout.write("Do you want to change that? (y/n) ");
+                if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                  o.setBS(false);
+                  stdout.writeln("This flat now has a shower cabin.");
+                }else{
+                  stdout.writeln("This flat still includes a bathtub.");
+                }
+              }else if(!o.getBS()){
+                stdout.writeln("This flat includes a shower cabin.");
+                stdout.write("Do you want to change that? (y/n) ");
+                if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                  o.setBS(true);
+                  stdout.writeln("This flat now has a bathtub.");
+                }else{
+                  stdout.writeln("This flat still includes a shower cabin.");
+                }
+              }
+            }
+            break;
+          case 10: /*(estate) dedication*/
+            if(o is Estate){
+              if(o.getDedication() == 1){
+                stdout.writeln("This estate currently is a building area.");
+                stdout.write("Do you want to change that? (y/n) ");
+                if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                  o.setDedication(2);
+                }else{
+                  stdout.writeln("This estate remains a building area.");
+                }
+              }else if(o.getDedication() == 2){
+                stdout.writeln("This estate currently is a business area.");
+                stdout.write("Do you want to change that? (y/n) ");
+                if((temp = stdin.readLineSync().toLowerCase()).startsWith("y")){
+                  o.setDedication(1);
+                }else{
+                  stdout.writeln("This estate remains a business area.");
+                }
+              }
+            }
+            break;
+          case 11: /*(estate) unit_value*/
+            if(o is Estate){
+              stdout.writeln("This estate's unit value currently is " + o.getUnitValue().toString() + ".");
+              stdout.write("Enter the estate's new unit value: ");
+              o.setUnitValue(double.parse(stdin.readLineSync()));
+            }
+            break;
+        }
+      }
     }
   }
 }

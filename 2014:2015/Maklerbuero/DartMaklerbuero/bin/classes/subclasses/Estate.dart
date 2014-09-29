@@ -4,7 +4,8 @@ import '../Objekt.dart';
 
 class Estate extends Objekt{
   
-  int dedication; /*1=building area   2=business area  --> no enum in Dart yet*/
+  /*1=building area   2=business area  --> no enum in Dart yet -->using int for the case there are more dedications to come*/
+  int dedication; 
   double unit_value; /*the unit's value*/
   
   Estate(int objnr, String an, bool tbr, double p, double as, int d, double uv):super(objnr, an, tbr, p, as){

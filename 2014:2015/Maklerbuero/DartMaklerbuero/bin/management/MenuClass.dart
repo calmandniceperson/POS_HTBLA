@@ -1,5 +1,9 @@
 library MenuClass;
 
+import '../classes/Objekt.dart';
+import '../classes/subclasses/House.dart';
+import '../classes/subclasses/Flat.dart';
+import '../classes/subclasses/Estate.dart';
 import 'dart:io';
 
 class MenuClass{
@@ -36,27 +40,23 @@ class MenuClass{
   /*
     Menu for editing objects
   */
-  int showEditMenu(int type){
+  int showEditMenu(Objekt o){
     stdout.writeln("\tWhat do you want to edit?\t");
     stdout.writeln("1 ... agent's name");
     stdout.writeln("2 ... buyable/rentable");
     stdout.writeln("3 ... price");
     stdout.writeln("4 ... area size");
     
-    switch(type){
-      case 1: /*house*/
-        stdout.writeln("5 ... multifamily (yes/no)");
-        stdout.writeln("6 ... number of floors");
-        stdout.writeln("7 ... cellar (yes/no)");
-        break;
-      case 2: /*flat*/
-        stdout.writeln("5 ... number of rooms");
-        stdout.writeln("6 ... bathtub/shower cabin");
-        break;
-      case 3: /*estate*/
-        stdout.writeln("5 ... dedication");
-        stdout.writeln("6 ... unit value");
-        break;
+    if(o is House){
+      stdout.writeln("5 ... multifamily (yes/no)");
+      stdout.writeln("6 ... number of floors");
+      stdout.writeln("7 ... cellar (yes/no)");
+    }else if(o is Flat){
+      stdout.writeln("5 ... number of rooms");
+      stdout.writeln("6 ... bathtub/shower cabin");
+    }else if(o is Estate){
+      stdout.writeln("5 ... dedication");
+      stdout.writeln("6 ... unit value");
     }
     
     int temp = int.parse(stdin.readLineSync());
@@ -65,21 +65,18 @@ class MenuClass{
       
       /*house is not listed in switch
       because it is the default for 5,6,7*/
-      switch(type){
-        case 2:
-          if(temp == 5){
-            temp = 8; /*number of rooms*/
-          }else if(temp == 6){
-            temp = 9; /*bathtub/shower cabin*/
-          }
-          break;
-        case 3:
-          if(temp == 5){
-            temp = 10; /*dedication*/
-          }else if(temp == 6){
-            temp = 11; /*unit value*/
-          }
-          break;
+      if(o is Flat){
+        if(temp == 5){
+          temp = 8; /*number of rooms*/
+        }else if(temp == 6){
+          temp = 9; /*bathtub/shower cabin*/
+        }
+      }else if(o is Estate){
+        if(temp == 5){
+          temp = 10; /*dedication*/
+        }else if(temp == 6){
+          temp = 11; /*unit value*/
+        }
       }
       
       /*
