@@ -1,9 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSMaklerbuero/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSMaklerbuero/Verwaltung/Verwaltung.cs">
     <Files>
-      <File FileName="CSMaklerbuero/Program.cs" Line="21" Column="15" />
-      <File FileName="CSMaklerbuero/Verwaltung/MenuClass.cs" Line="30" Column="43" />
+      <File FileName="CSMaklerbuero/Program.cs" Line="79" Column="52" />
+      <File FileName="CSMaklerbuero/Verwaltung/Verwaltung.cs" Line="78" Column="27" />
+      <File FileName="CSMaklerbuero/Klassen/Abgeleitete_Klassen/Haus.cs" Line="33" Column="10" />
+      <File FileName="CSMaklerbuero/Klassen/Abgeleitete_Klassen/Wohnung.cs" Line="33" Column="19" />
+      <File FileName="CSMaklerbuero/Klassen/Abgeleitete_Klassen/Grundstueck.cs" Line="47" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

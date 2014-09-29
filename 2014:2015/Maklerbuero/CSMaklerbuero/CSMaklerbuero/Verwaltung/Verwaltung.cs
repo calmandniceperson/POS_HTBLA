@@ -508,6 +508,10 @@ namespace CSMaklerbuero
         }
         #endregion
         #region output
+		public void printProvision(int objnr){
+			Console.WriteLine(getObjektByObjNr (objnr).getProvision ().ToString());
+		}
+
         public void printResult(Objekt o)
         {
             Console.WriteLine("Objektnummer: " + o.getObjNr().ToString());

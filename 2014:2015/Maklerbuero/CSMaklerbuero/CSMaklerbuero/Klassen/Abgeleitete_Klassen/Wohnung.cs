@@ -29,6 +29,17 @@ namespace CSMaklerbuero
             bad_dusche = bd;
         }
 
+		#region PROVISION
+		public override double getProvision(){
+			if (getTKM ()) {
+				return (getKosten () / 100) * 2;
+			} else if (!getTKM ()) {
+				return getKosten () * 3;
+			}
+			return 0;
+		}
+		#endregion
+
         /*GET*/
         public int getAnzZimmer()
         {

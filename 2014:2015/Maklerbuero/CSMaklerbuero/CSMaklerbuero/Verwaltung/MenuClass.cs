@@ -31,6 +31,7 @@ namespace CSMaklerbuero
             Console.WriteLine("4 ... Liste ausgeben");
             Console.WriteLine("5 ... Nach bestimmten Kriterien ausgeben");
             Console.WriteLine("6 ... Billigstes/Teuerstes/Durchschnitt");
+			Console.WriteLine ("7 ... Provision ausgeben");
 
 
             return int.Parse(Console.ReadLine());

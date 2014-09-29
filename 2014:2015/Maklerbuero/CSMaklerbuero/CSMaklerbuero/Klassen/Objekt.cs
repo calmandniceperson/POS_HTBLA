@@ -32,6 +32,12 @@ namespace CSMaklerbuero
             flaeche = f;
         }
 
+		#region PROVISION
+		public virtual double getProvision(){
+			return getKosten ();
+		}
+		#endregion
+
         #region GET
         public int getObjNr()
         {

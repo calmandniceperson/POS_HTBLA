@@ -74,6 +74,10 @@ namespace CSMaklerbuero
                     case 6:
                         mc.showBTDMenu(v);
                         break;
+					case 7:
+						Console.Write("Für welches Objekt wollen Sie die Provision ausgeben? (Objektnummer) ");
+					v.printProvision(int.Parse(Console.ReadLine()));
+						break;
                 }
                 Console.WriteLine();
                 Console.WriteLine("Wollen Sie noch eine Aktion ausführen? (J/N) ");

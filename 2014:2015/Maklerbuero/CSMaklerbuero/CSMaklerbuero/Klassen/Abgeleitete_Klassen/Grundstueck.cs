@@ -41,6 +41,17 @@ namespace CSMaklerbuero
             einheitswert = e;
         }
 
+		#region PROVISION
+		public override double getProvision(){
+			if (getTKM ()) {
+				return (getKosten () / 100) * 4;
+			} else if (!getTKM ()) {
+				Console.WriteLine ("Keine Provision für den Makler.");
+			}
+			return 0;
+		}
+		#endregion
+
         /*GET*/
         public string getWidmung()
         {

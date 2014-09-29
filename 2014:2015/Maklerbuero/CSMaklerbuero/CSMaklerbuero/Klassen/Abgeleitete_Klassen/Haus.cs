@@ -32,6 +32,17 @@ namespace CSMaklerbuero
             keller = c;
         }
 
+		#region PROVISION
+		public override double getProvision(){
+			if (getTKM ()) {
+				return (getKosten () / 100) * 3;
+			} else if (!getTKM ()) {
+				return getKosten () * 5;
+			}
+			return 0;
+		}
+		#endregion
+
         #region GET
         public bool getMehrFHaus()
         {
