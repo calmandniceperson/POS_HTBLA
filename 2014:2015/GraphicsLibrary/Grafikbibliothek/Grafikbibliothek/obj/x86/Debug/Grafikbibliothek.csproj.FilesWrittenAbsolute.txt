@@ -1,0 +1,5 @@
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/GraphicsLibrary/Grafikbibliothek/Grafikbibliothek/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/GraphicsLibrary/Grafikbibliothek/Grafikbibliothek/bin/Debug/Grafikbibliothek.exe.mdb
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/GraphicsLibrary/Grafikbibliothek/Grafikbibliothek/bin/Debug/Grafikbibliothek.exe
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/GraphicsLibrary/Grafikbibliothek/Grafikbibliothek/obj/x86/Debug/Grafikbibliothek.exe
+/Users/mko/Documents/Schule/POS/2014:2015/Beispiele/GraphicsLibrary/Grafikbibliothek/Grafikbibliothek/obj/x86/Debug/Grafikbibliothek.exe.mdb
