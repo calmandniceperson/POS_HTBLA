@@ -5,13 +5,13 @@ namespace Grafikbibliothek
 	public class CRechteck:CGraphObj
 	{
 		double xd, yd;
-		public CRechteck (int i, double x, double y) : base (i)
+		public CRechteck (int i, double x, double y, double xdvalue, double ydvalue) : base (i, x, y)
 		{
-			xd = x/2;
-			yd = y/2;
+			xd = xdvalue/2;
+			yd = ydvalue/2;
 		}
 
-		public void draw(){
+		new public void draw(){
 			base.draw ();
 			Console.WriteLine ("Das Objekt ist ein Rechteckt.");
 			Console.WriteLine ("Höhe: " + (xd*2));

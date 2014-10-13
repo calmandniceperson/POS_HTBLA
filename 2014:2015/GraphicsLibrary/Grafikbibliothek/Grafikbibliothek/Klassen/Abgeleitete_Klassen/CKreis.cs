@@ -5,7 +5,7 @@ namespace Grafikbibliothek
 	public class CKreis:CGraphObj
 	{
 		double radius;
-		public CKreis (int i, double r):base(i)
+		public CKreis (int i, double x, double y, double r):base(i, x, y)
 		{
 			radius = r;
 		}

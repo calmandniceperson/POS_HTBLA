@@ -6,17 +6,13 @@ namespace Grafikbibliothek
 	{
 		int id;
 		CPunkt punkt;
-		public CGraphObj (int i)
+		public CGraphObj (int i, double x, double y)
 		{
 			id = i;
-			setPos (punkt);
+			setPos (punkt, x, y);
 		}
 
-		public void setPos(CPunkt p){
-			Console.Write ("Geben Sie die x-Koordinate ein: ");
-			double x = double.Parse (Console.ReadLine ());
-			Console.Write ("Geben Sie die y-Koordinate ein: ");
-			double y = double.Parse (Console.ReadLine ());
+		public void setPos(CPunkt p, double x, double y){
 			punkt = new CPunkt (x, y);
 		}
 

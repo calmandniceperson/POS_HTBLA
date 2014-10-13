@@ -12,11 +12,11 @@ namespace Grafikbibliothek
 
 		int objnr; //nummer fuer die liste
 		CGraphObj tempobj; //temporaeres objekt
-		double x, y, radius, seitenlaenge; //zusatzinfos
+		double x, y, xd, yd, radius, seitenlaenge; //zusatzinfos
 		List<CGraphObj> graphList = new List<CGraphObj>();
 
 		#region newobject
-		public void newObjekt(int type, Nullable<int> preid = null){
+		public void newObjekt(int type, Nullable<int> preid = null /*pre-ID --> zum ueberschreiben eines Objekts*/){
 
 			if (preid == null) {
 				if (!graphList.Any () /*falls die Liste nichts enthaelt*/) {
@@ -28,33 +28,38 @@ namespace Grafikbibliothek
 				objnr = Convert.ToInt32(preid);
 			}
 
+			Console.Write ("Geben Sie die x-Koordinate des Mittelpunkts ein: ");
+			x = double.Parse (Console.ReadLine ());
+			Console.Write ("Geben Sie die y-Koordinate des Mittelpunkts ein: ");
+			y = double.Parse (Console.ReadLine ());
+
 			switch (type) {
 			case 1:
 				Console.Write ("Geben Sie an, wie weit die Endpunkte horizontal vom Mittelpunkt entfernt sind: ");
-				x = double.Parse (Console.ReadLine ());
+				xd = double.Parse (Console.ReadLine ());
 				Console.Write ("Geben Sie an, wie weit die Endpunkte vertikal vom Mittelpunkt entfernt sind: ");
-				y = double.Parse (Console.ReadLine ());
-				graphList.Add (new CLinie (objnr, x, y));
+				yd = double.Parse (Console.ReadLine ());
+				graphList.Add (new CLinie (objnr, x, y, xd, yd));
 				printObject (objnr);
 				break;
 			case 2:
 				Console.WriteLine ("Geben Sie die Höhe an: ");
-				x = double.Parse (Console.ReadLine ());
+				xd = double.Parse (Console.ReadLine ());
 				Console.WriteLine ("Geben Sie die Breite an: ");
-				y = double.Parse (Console.ReadLine ());
-				graphList.Add (new CRechteck (objnr, x, y));
+				yd = double.Parse (Console.ReadLine ());
+				graphList.Add (new CRechteck (objnr, x, y, xd, yd));
 				printObject (objnr);
 				break;
 			case 3:
 				Console.Write ("Geben Sie den Radius des Kreises an: ");
 				radius = double.Parse (Console.ReadLine ());
-				graphList.Add (new CKreis (objnr, radius));
+				graphList.Add (new CKreis (objnr, x, y, radius));
 				printObject (objnr);
 				break;
 			case 4:
 				Console.Write ("Geben Sie die Länge einer Seite an: ");
 				seitenlaenge = double.Parse (Console.ReadLine ());
-				graphList.Add (new CQuadrat (objnr, seitenlaenge));
+				graphList.Add (new CQuadrat (objnr, x, y, seitenlaenge));
 				printObject (objnr);
 				break;
 			}
