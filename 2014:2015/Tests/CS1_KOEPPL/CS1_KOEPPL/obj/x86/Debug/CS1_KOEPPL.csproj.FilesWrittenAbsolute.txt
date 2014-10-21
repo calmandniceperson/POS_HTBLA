@@ -1,0 +1,5 @@
+/Users/mko/Documents/Schule/POS/2014:2015/Tests/CS1_KOEPPL/CS1_KOEPPL/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Documents/Schule/POS/2014:2015/Tests/CS1_KOEPPL/CS1_KOEPPL/bin/Debug/CS1_KOEPPL.exe.mdb
+/Users/mko/Documents/Schule/POS/2014:2015/Tests/CS1_KOEPPL/CS1_KOEPPL/bin/Debug/CS1_KOEPPL.exe
+/Users/mko/Documents/Schule/POS/2014:2015/Tests/CS1_KOEPPL/CS1_KOEPPL/obj/x86/Debug/CS1_KOEPPL.exe
+/Users/mko/Documents/Schule/POS/2014:2015/Tests/CS1_KOEPPL/CS1_KOEPPL/obj/x86/Debug/CS1_KOEPPL.exe.mdb
