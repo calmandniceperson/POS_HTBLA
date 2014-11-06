@@ -1,0 +1,7 @@
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Telefonkosten/CSTelefonkostenForms/CSTelefonkostenForms/obj/x86/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Telefonkosten/CSTelefonkostenForms/CSTelefonkostenForms/obj/x86/Debug/CSTelefonkostenForms.Form1.resources
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Telefonkosten/CSTelefonkostenForms/CSTelefonkostenForms/obj/x86/Debug/CSTelefonkostenForms.Properties.Resources.resources
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Telefonkosten/CSTelefonkostenForms/CSTelefonkostenForms/bin/Debug/CSTelefonkostenForms.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Telefonkosten/CSTelefonkostenForms/CSTelefonkostenForms/bin/Debug/CSTelefonkostenForms.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Telefonkosten/CSTelefonkostenForms/CSTelefonkostenForms/obj/x86/Debug/CSTelefonkostenForms.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Telefonkosten/CSTelefonkostenForms/CSTelefonkostenForms/obj/x86/Debug/CSTelefonkostenForms.exe.mdb

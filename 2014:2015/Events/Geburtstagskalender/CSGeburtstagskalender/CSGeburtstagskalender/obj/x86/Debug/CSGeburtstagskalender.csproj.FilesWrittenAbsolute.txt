@@ -1,0 +1,5 @@
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Geburtstagskalender/CSGeburtstagskalender/CSGeburtstagskalender/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Geburtstagskalender/CSGeburtstagskalender/CSGeburtstagskalender/bin/Debug/CSGeburtstagskalender.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Geburtstagskalender/CSGeburtstagskalender/CSGeburtstagskalender/bin/Debug/CSGeburtstagskalender.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Geburtstagskalender/CSGeburtstagskalender/CSGeburtstagskalender/obj/x86/Debug/CSGeburtstagskalender.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Events/Geburtstagskalender/CSGeburtstagskalender/CSGeburtstagskalender/obj/x86/Debug/CSGeburtstagskalender.exe.mdb

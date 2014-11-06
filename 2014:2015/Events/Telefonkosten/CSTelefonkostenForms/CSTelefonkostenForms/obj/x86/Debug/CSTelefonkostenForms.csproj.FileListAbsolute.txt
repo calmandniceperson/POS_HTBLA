@@ -1,0 +1,9 @@
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\obj\x86\Debug\CSTelefonkostenForms.Form1.resources
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\obj\x86\Debug\CSTelefonkostenForms.Properties.Resources.resources
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\bin\Debug\CSTelefonkostenForms.exe
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\bin\Debug\CSTelefonkostenForms.pdb
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\obj\x86\Debug\CSTelefonkostenForms.exe
+C:\Users\mko\Documents\Schule\Events\Telefonkosten\CSTelefonkostenForms\CSTelefonkostenForms\obj\x86\Debug\CSTelefonkostenForms.pdb
