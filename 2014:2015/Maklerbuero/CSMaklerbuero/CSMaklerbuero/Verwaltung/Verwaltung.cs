@@ -49,462 +49,469 @@ namespace CSMaklerbuero
         double ew;
         /*GRUNDSTUECK*/
 
-        public Verwaltung()
-        {
-        }
-
         #region create/delete/edit objects
         public void newObjekt()
         {
+			try{
+	            if (!objListe.Any() /*falls die Liste nichts enthaelt*/)
+	            {
+	                objnr = 1;
+	            }
+	            else
+	            {
+	                objnr = objListe.Last().getObjNr() + 1; /*erhoeht die Nummer fuer das neue Objekt um 1, sodass jedes neue Objekt die naechsthoehere Nummer bekommt*/
+	            }
 
-            if (!objListe.Any() /*falls die Liste nichts enthaelt*/)
-            {
-                objnr = 1;
-            }
-            else
-            {
-                objnr = objListe.Last().getObjNr() + 1; /*erhoeht die Nummer fuer das neue Objekt um 1, sodass jedes neue Objekt die naechsthoehere Nummer bekommt*/
-            }
+	            Console.Write("Wer ist der zuständige Makler? (Vorname) ");
+	            string vname = Console.ReadLine();
+	            Console.WriteLine("Nachname des zuständigen Maklers: ");
+	            string nname = Console.ReadLine();
 
-            Console.Write("Wer ist der zuständige Makler? (Vorname) ");
-            string vname = Console.ReadLine();
-            Console.WriteLine("Nachname des zuständigen Maklers: ");
-            string nname = Console.ReadLine();
+	            /*Vorname und Nachname zusammenfuegen*/
+	            name = vname + " " + nname;
 
-            /*Vorname und Nachname zusammenfuegen*/
-            name = vname + " " + nname;
+	            /*typus_kaufus_mietus*/
+	            Console.WriteLine("Ist das Objekt zu Kaufen (1) oder zu Mieten (2)? ");
+	            temp = Console.ReadLine();
+	            if (procTKM(temp))
+	            {
+	                if (temp == "1")
+	                {
+	                    tkm = true;
+	                }
+	                else if (temp == "2")
+	                {
+	                    tkm = false;
+	                }
+	            }
+	            else
+	            {
+	                procTKM(temp);
+	            }
 
-            /*typus_kaufus_mietus*/
-            Console.WriteLine("Ist das Objekt zu Kaufen (1) oder zu Mieten (2)? ");
-            temp = Console.ReadLine();
-            if (procTKM(temp))
-            {
-                if (temp == "1")
-                {
-                    tkm = true;
-                }
-                else if (temp == "2")
-                {
-                    tkm = false;
-                }
-            }
-            else
-            {
-                procTKM(temp);
-            }
+	            /*kosten*/
+	            Console.WriteLine("Welchen Preis hat ihr Objekt? ");
+	            k = double.Parse(Console.ReadLine());
 
-            /*kosten*/
-            Console.WriteLine("Welchen Preis hat ihr Objekt? ");
-            k = double.Parse(Console.ReadLine());
+	            /*flaeche*/
+	            Console.Write("Welche Fläche hat Ihr Objekt? (in m^2)");
+	            temp = Console.ReadLine();
 
-            /*flaeche*/
-            Console.Write("Welche Fläche hat Ihr Objekt? (in m^2)");
-            temp = Console.ReadLine();
+	            /*suche nach buchstaben (falls user m^2 dazugeschrieben hat)*/
+	            if (!temp.Any(x => char.IsLetter(x)))
+	            {/*true = keine Buchstaben*/
+	                f = double.Parse(temp);
+	            }
+	            else
+	            { /*buchstaben im string*/
+	                foreach (char bs in temp)
+	                { /*überprüfe alle Zeichen, ob sie Buchstaben sind*/
+	                    if (Char.IsLetter(bs))
+	                    {
+	                        f = double.Parse(temp.Remove(temp.IndexOf(bs)));
+	                        break;
+	                    }
+	                    else
+	                    {
+	                        continue;
+	                    }
+	                }
+	            }
 
-            /*suche nach buchstaben (falls user m^2 dazugeschrieben hat)*/
-            if (!temp.Any(x => char.IsLetter(x)))
-            {/*true = keine Buchstaben*/
-                f = double.Parse(temp);
-            }
-            else
-            { /*buchstaben im string*/
-                foreach (char bs in temp)
-                { /*überprüfe alle Zeichen, ob sie Buchstaben sind*/
-                    if (Char.IsLetter(bs))
-                    {
-                        f = double.Parse(temp.Remove(temp.IndexOf(bs)));
-                        break;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-            }
+	            Console.Write("Ist Ihr Objekt eine Wohnung (1), ein Haus (2) oder ein Grundstück (3)? ");
+	            int objTyp = int.Parse(Console.ReadLine());
 
-            Console.Write("Ist Ihr Objekt eine Wohnung (1), ein Haus (2) oder ein Grundstück (3)? ");
-            int objTyp = int.Parse(Console.ReadLine());
+	            switch (objTyp)
+	            {
+	                case 1 /*Wohnung*/:
+	                    Console.Write("Wieviele Zimmer hat Ihre Wohnung? ");
+	                    anz_z = int.Parse(Console.ReadLine());
 
-            switch (objTyp)
-            {
-                case 1 /*Wohnung*/:
-                    Console.Write("Wieviele Zimmer hat Ihre Wohnung? ");
-                    anz_z = int.Parse(Console.ReadLine());
+	                    Console.Write("Hat Ihre Wohnung eine Badewanne (1) oder eine Dusche? (2) ");
+	                    temp = Console.ReadLine();
+	                    if (temp == "1")
+	                    {
+	                        bd = true;
+	                    }
+	                    else if (temp == "2")
+	                    {
+	                        bd = false;
+	                    }
 
-                    Console.Write("Hat Ihre Wohnung eine Badewanne (1) oder eine Dusche? (2) ");
-                    temp = Console.ReadLine();
-                    if (temp == "1")
-                    {
-                        bd = true;
-                    }
-                    else if (temp == "2")
-                    {
-                        bd = false;
-                    }
+	                    /*fuege neue, fertige Wohnung zur Liste der Objekte hinzu*/
+	                    objListe.Add(new Wohnung(objnr, name, tkm, k, f, anz_z, bd));
 
-                    /*fuege neue, fertige Wohnung zur Liste der Objekte hinzu*/
-                    objListe.Add(new Wohnung(objnr, name, tkm, k, f, anz_z, bd));
+	                    if (getObjektByObjNr(objnr) != null)
+	                    {
+	                        Console.Clear();
+	                        printResult(getObjektByObjNr(objnr));
+	                    }
+	                    else
+	                    {
+	                        Console.WriteLine("null");
+	                    }
 
-                    if (getObjektByObjNr(objnr) != null)
-                    {
-                        Console.Clear();
-                        printResult(getObjektByObjNr(objnr));
-                    }
-                    else
-                    {
-                        Console.WriteLine("null");
-                    }
+	                    break;
+	                case 2 /*Haus*/:
+	                    Console.WriteLine("Ist das Haus ein Mehrfamilienhaus? (J/N)");
+	                    if ((temp = Console.ReadLine().ToLower()) == "j")
+	                    {
+	                        mehrfahau = true;
+	                    }
+	                    else if (temp == "n")
+	                    {
+	                        mehrfahau = false;
+	                    }
 
-                    break;
-                case 2 /*Haus*/:
-                    Console.WriteLine("Ist das Haus ein Mehrfamilienhaus? (J/N)");
-                    if ((temp = Console.ReadLine().ToLower()) == "j")
-                    {
-                        mehrfahau = true;
-                    }
-                    else if (temp == "n")
-                    {
-                        mehrfahau = false;
-                    }
+	                    Console.WriteLine("Wieviele Etagen hat das Haus? ");
+	                    anz_eta = int.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Wieviele Etagen hat das Haus? ");
-                    anz_eta = int.Parse(Console.ReadLine());
+	                    Console.WriteLine("Hat das Haus einen Keller? (J/N) ");
+	                    if ((temp = Console.ReadLine().ToLower()) == "j")
+	                    {
+	                        keller = true;
+	                    }
+	                    else if (temp == "n")
+	                    {
+	                        keller = false;
+	                    }
 
-                    Console.WriteLine("Hat das Haus einen Keller? (J/N) ");
-                    if ((temp = Console.ReadLine().ToLower()) == "j")
-                    {
-                        keller = true;
-                    }
-                    else if (temp == "n")
-                    {
-                        keller = false;
-                    }
+	                    /*fuege neue, fertige Wohnung zur Liste der Objekte hinzu*/
+	                    objListe.Add(new Haus(objnr, name, tkm, k, f, mehrfahau, anz_eta, keller));
 
-                    /*fuege neue, fertige Wohnung zur Liste der Objekte hinzu*/
-                    objListe.Add(new Haus(objnr, name, tkm, k, f, mehrfahau, anz_eta, keller));
+	                    if (getObjektByObjNr(objnr) != null)
+	                    {
+	                        Console.Clear();
+	                        printResult(getObjektByObjNr(objnr));
+	                    }
+	                    else
+	                    {
+	                        Console.WriteLine("null");
+	                    }
+	                    break;
+	                case 3 /*Grundstueck*/:
+	                    Console.WriteLine("Wofür soll das Grundstück verwendet werden? (Baugrund(1)/Geschäftsfläche(2)) ");
+	                    widmung = Console.ReadLine();
 
-                    if (getObjektByObjNr(objnr) != null)
-                    {
-                        Console.Clear();
-                        printResult(getObjektByObjNr(objnr));
-                    }
-                    else
-                    {
-                        Console.WriteLine("null");
-                    }
-                    break;
-                case 3 /*Grundstueck*/:
-                    Console.WriteLine("Wofür soll das Grundstück verwendet werden? (Baugrund(1)/Geschäftsfläche(2)) ");
-                    widmung = Console.ReadLine();
+	                    Console.WriteLine("Was ist der Einheitswert für das Grundstück? ");
+	                    ew = double.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Was ist der Einheitswert für das Grundstück? ");
-                    ew = double.Parse(Console.ReadLine());
+	                    /*fuege neue, fertige Wohnung zur Liste der Objekte hinzu*/
+	                    objListe.Add(new Grundstueck(objnr, name, tkm, k, f, widmung, ew));
 
-                    /*fuege neue, fertige Wohnung zur Liste der Objekte hinzu*/
-                    objListe.Add(new Grundstueck(objnr, name, tkm, k, f, widmung, ew));
-
-                    if (getObjektByObjNr(objnr) != null)
-                    {
-                        Console.Clear();
-                        printResult(getObjektByObjNr(objnr));
-                    }
-                    else
-                    {
-                        Console.WriteLine("null");
-                    }
-                    break;
-                default:
-                    Console.WriteLine("ERROR");
-                    break;
-            }
+	                    if (getObjektByObjNr(objnr) != null)
+	                    {
+	                        Console.Clear();
+	                        printResult(getObjektByObjNr(objnr));
+	                    }
+	                    else
+	                    {
+	                        Console.WriteLine("null");
+	                    }
+	                    break;
+	                default:
+	                    Console.WriteLine("ERROR");
+	                    break;
+	            }
+			}catch(Exception ex){
+				throw;
+			}
         }
 
         public void deleteObjekt(int objnr)
         {
-            foreach (Objekt o in objListe)
-            {
-                if (o.getObjNr() == objnr)
-                {
-                    objListe.Remove(o);
-                    break;
-                }
-                else
-                {
-                    continue;
-                }
-            }
+			foreach (Objekt o in objListe)
+			{
+				if (o.getObjNr() == objnr)
+				{
+					try{
+						objListe.Remove(o);
+						break;
+					}catch(Exception exe){
+						Console.WriteLine(exe.ToString());
+					}
+				}
+				else
+				{
+					continue;
+				}
+			}
         }
 
         public void editObjekt(int objnr, MenuClass mc)
         {
-            foreach (Objekt o in objListe)
-            {
-                if (o.getObjNr() == objnr)
-                {
-                    switch (mc.showEditMenu(o.GetType().Name))
-                    {
-                        case 1: /*Maklername editieren*/
-                            Console.WriteLine("Der derzeitige Name des Maklers ist: " + o.getMakler() + ".");
-                            Console.WriteLine("Geben Sie den Namen des neuen Maklers ein (leer lassen um abzubrechen):");
-                            temp = Console.ReadLine();
-                            if (temp != string.Empty)
-                            {
-                                if (temp.Contains(" "))
-                                {
-                                    o.setMakler(temp);
-                                    Console.Clear();
-                                    Console.WriteLine("Der neue Name des Maklers ist " + o.getMakler() + ".");
-                                }
-                            }
-                            else
-                            {
-                                break;
-                            }
-                            break;
-                        case 2: /*Mieten/Kaufen*/
-                            if (o.getTKM() == true)
-                            {
-                                Console.WriteLine("Das Objekt ist derzeit zum Kauf angeboten.");
-                                Console.Write("Wollen Sie das Objekt mietbar machen? (J/N) ");
-                                temp = Console.ReadLine();
-                                if (temp.ToLower().StartsWith("j"))
-                                {
-                                    o.setTKM(false);
-                                    Console.Clear();
-                                    Console.WriteLine("Das Objekt ist jetzt zu Mieten.");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine("Das Objekt ist derzeit zu Mieten.");
-                                Console.Write("Wollen Sie das Objekt käuflich machen? (J/N) ");
-                                temp = Console.ReadLine();
-                                if (temp.ToLower().StartsWith("j"))
-                                {
-                                    o.setTKM(true);
-                                    Console.Clear();
-                                    Console.WriteLine("Das Objekt ist jetzt zu Kaufen.");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            break;
-                        case 3: /*Preis*/
-                            Console.WriteLine("Der derzeitige Preis beträgt: " + o.getKosten().ToString() + "€.");
-                            Console.Write("Geben Sie den neuen Preis ein (leer lassen um abzubrechen): ");
-                            temp = Console.ReadLine();
-                            if (temp != string.Empty)
-                            {
-                                o.setKosten(double.Parse(temp));
-                                Console.Clear();
-                                Console.WriteLine("Das Objekt kostet nun " + o.getKosten().ToString() + "€.");
-                            }
-                            else
-                            {
-                                break;
-                            }
-                            break;
-                        case 4: /*Flaeche*/
-                            Console.WriteLine("Die derzeitige Fläche beträgt: " + o.getFlaeche().ToString() + "m^2");
-                            Console.Write("Geben Sie die neue Fläche an (leer lassen um abzubrechen): ");
-                            temp = Console.ReadLine();
-                            if (temp != string.Empty)
-                            {
-                                o.setFlaeche(double.Parse(temp));
-                                Console.Clear();
-                                Console.WriteLine("Das Objekt hat jetzt eine Fläche von " + o.getFlaeche().ToString() + "m^2.");
-                            }
-                            else
-                            {
-                                break;
-                            }
-                            break;
-                        case 5: /*(Wohnung) Anzahl Zimmer aendern*/
-                            w = (Wohnung)o;
-                            Console.WriteLine("Die Wohnung hat derzeit: " + w.getAnzZimmer().ToString() + ".");
-                            Console.Write("Geben Sie die neue Anzahl an Zimmern ein (leer lassen um abzubrechen): ");
-                            temp = Console.ReadLine();
-                            if (temp != string.Empty)
-                            {
-                                w.setAnzZimmer(int.Parse(temp));
-                                Console.Clear();
-                                Console.WriteLine("Die Wohnung hat jetzt " + w.getAnzZimmer().ToString() + " Zimmer.");
-                            }
-                            else
-                            {
-                                break;
-                            }
-                            break;
-                        case 6: /*(Wohnung) Badewanne/Dusche*/
-                            w = (Wohnung)o;
-                            if (w.getBD() == true)
-                            {
-                                Console.WriteLine("Die Wohnung hat eine Badewanne. Wollen Sie eine Dusche eintragen? (J/N) ");
-                                temp = Console.ReadLine();
-                                if (temp.ToLower().StartsWith("j"))
-                                {
-                                    w.setBD(false);
-                                    Console.Clear();
-                                    Console.WriteLine("Die Wohnung hat jetzt eine Dusche.");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine("Die Wohnung hat eine Dusche. Wollen Sie eine Badewanne eintragen? (J/N) ");
-                                temp = Console.ReadLine();
-                                if (temp.ToLower().StartsWith("j"))
-                                {
-                                    w.setBD(true);
-                                    Console.Clear();
-                                    Console.WriteLine("Die Wohnung hat jetzt eine Badewanne.");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            break;
-                        case 7: /*(Haus) Mehrfamilienhaus*/
-                            h = (Haus)o;
-                            if (h.getMehrFHaus() == true)
-                            {
-                                Console.WriteLine("Das Haus ist ein Mehrfamilienhaus.");
-                                Console.Write("Wollen Sie das ändern? (J/N) ");
-                                temp = Console.ReadLine();
-                                if (temp.ToLower().StartsWith("j"))
-                                {
-                                    h.setMehrFHaus(false);
-                                    Console.Clear();
-                                    Console.WriteLine("Das Haus ist jetzt kein Mehrfamilienhaus mehr.");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine("Das Haus ist kein Mehrfamilienhaus.");
-                                Console.Write("Wollen Sie das ändern? (J/N) ");
-                                temp = Console.ReadLine();
-                                if (temp.ToLower().StartsWith("j"))
-                                {
-                                    h.setMehrFHaus(true);
-                                    Console.Clear();
-                                    Console.WriteLine("Das Haus ist jetzt ein Mehrfamilienhaus.");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            break;
-                        case 8: /*(Haus) Anzahl Etagen*/
-                            h = (Haus)o;
-                            Console.WriteLine("Das Haus hat: " + h.getAnzEtagen().ToString() + " Etagen.");
-                            Console.Write("Geben Sie die neue Anzahl der Etagen an (leer lassen um abzubrechen): ");
-                            temp = Console.ReadLine();
-                            if (temp != string.Empty)
-                            {
-                                h.setAnzEtagen(int.Parse(temp));
-                                Console.Clear();
-                                Console.WriteLine("Das Haus hat jetzt " + h.getAnzEtagen().ToString() + " Etagen.");
-                            }
-                            else
-                            {
-                                break;
-                            }
-                            break;
-                        case 9: /*(Haus) Keller*/
-                            h = (Haus)o;
-                            if (h.getKeller() == true)
-                            {
-                                Console.WriteLine("Das Haus hat einen Keller.");
-                                Console.Write("Wollen Sie das ändern? (J/N) ");
-                                temp = Console.ReadLine();
-                                if (temp.ToLower().StartsWith("j"))
-                                {
-                                    h.setKeller(false);
-                                    Console.Clear();
-                                    Console.WriteLine("Das Haus hat jetzt keinen Keller mehr. ");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine("Das Haus hat keinen Keller.");
-                                Console.Write("Wollen Sie das ändern? (J/N) ");
-                                temp = Console.ReadLine();
-                                if (temp.ToLower().StartsWith("j"))
-                                {
-                                    h.setKeller(true);
-                                    Console.Clear();
-                                    Console.WriteLine("Das Haus hat jetzt einen Keller.");
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            break;
-                        case 10: /*(Grundstueck) Widmung*/
-                            g = (Grundstueck)o;
-                            Console.WriteLine("Die derzeitige Widmung des Grundstücks ist: " + g.getWidmung() + ".");
-                            Console.Write("Wollen Sie einen Baugrund (1) \n\r oder eine Geschaeftsflaeche (2) daraus machen? (leer lassen um abzubrechen) ");
-                            temp = Console.ReadLine();
-                            if (temp != string.Empty)
-                            {
-                                switch (temp)
-                                {
-                                    case "1":
-                                        g.setWidmung(1);
-                                        Console.Clear();
-                                        Console.WriteLine("Das Grundstück ist jetzt ein Baugrund.");
-                                        break;
-                                    case "2":
-                                        Console.Clear();
-                                        Console.WriteLine("Das Grundstück ist jetzt eine Geschäftsfläche.");
-                                        g.setWidmung(2);
-                                        break;
-                                }
-                            }
-                            else
-                            {
-                                break;
-                            }
-                            break;
-                        case 11: /*(Grundstueck) Einheitswert*/
-                            g = (Grundstueck)o;
-                            Console.WriteLine("Der Einheitswert beträgt derzeit: " + g.getEW() + ".");
-                            Console.Write("Geben Sie den neuen Einheitswert an (leer lassen um abzubrechen): ");
-                            temp = Console.ReadLine();
-                            if (temp != string.Empty)
-                            {
-                                g.setEW(double.Parse(temp));
-                                Console.Clear();
-                                Console.WriteLine("Der neue Einheitswert beträgt " + g.getEW().ToString() + ".");
-                            }
-                            else
-                            {
-                                break;
-                            }
-                            break;
-                    }
-                }
-            }
+			try{
+	            foreach (Objekt o in objListe)
+	            {
+	                if (o.getObjNr() == objnr)
+	                {
+	                    switch (mc.showEditMenu(o.GetType().Name))
+	                    {
+	                        case 1: /*Maklername editieren*/
+	                            Console.WriteLine("Der derzeitige Name des Maklers ist: " + o.getMakler() + ".");
+	                            Console.WriteLine("Geben Sie den Namen des neuen Maklers ein (leer lassen um abzubrechen):");
+	                            temp = Console.ReadLine();
+	                            if (temp != string.Empty)
+	                            {
+	                                if (temp.Contains(" "))
+	                                {
+	                                    o.setMakler(temp);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Der neue Name des Maklers ist " + o.getMakler() + ".");
+	                                }
+	                            }
+	                            else
+	                            {
+	                                break;
+	                            }
+	                            break;
+	                        case 2: /*Mieten/Kaufen*/
+	                            if (o.getTKM() == true)
+	                            {
+	                                Console.WriteLine("Das Objekt ist derzeit zum Kauf angeboten.");
+	                                Console.Write("Wollen Sie das Objekt mietbar machen? (J/N) ");
+	                                temp = Console.ReadLine();
+	                                if (temp.ToLower().StartsWith("j"))
+	                                {
+	                                    o.setTKM(false);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Das Objekt ist jetzt zu Mieten.");
+	                                }
+	                                else
+	                                {
+	                                    break;
+	                                }
+	                            }
+	                            else
+	                            {
+	                                Console.WriteLine("Das Objekt ist derzeit zu Mieten.");
+	                                Console.Write("Wollen Sie das Objekt käuflich machen? (J/N) ");
+	                                temp = Console.ReadLine();
+	                                if (temp.ToLower().StartsWith("j"))
+	                                {
+	                                    o.setTKM(true);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Das Objekt ist jetzt zu Kaufen.");
+	                                }
+	                                else
+	                                {
+	                                    break;
+	                                }
+	                            }
+	                            break;
+	                        case 3: /*Preis*/
+	                            Console.WriteLine("Der derzeitige Preis beträgt: " + o.getKosten().ToString() + "€.");
+	                            Console.Write("Geben Sie den neuen Preis ein (leer lassen um abzubrechen): ");
+	                            temp = Console.ReadLine();
+	                            if (temp != string.Empty)
+	                            {
+	                                o.setKosten(double.Parse(temp));
+	                                Console.Clear();
+	                                Console.WriteLine("Das Objekt kostet nun " + o.getKosten().ToString() + "€.");
+	                            }
+	                            else
+	                            {
+	                                break;
+	                            }
+	                            break;
+	                        case 4: /*Flaeche*/
+	                            Console.WriteLine("Die derzeitige Fläche beträgt: " + o.getFlaeche().ToString() + "m^2");
+	                            Console.Write("Geben Sie die neue Fläche an (leer lassen um abzubrechen): ");
+	                            temp = Console.ReadLine();
+	                            if (temp != string.Empty)
+	                            {
+	                                o.setFlaeche(double.Parse(temp));
+	                                Console.Clear();
+	                                Console.WriteLine("Das Objekt hat jetzt eine Fläche von " + o.getFlaeche().ToString() + "m^2.");
+	                            }
+	                            else
+	                            {
+	                                break;
+	                            }
+	                            break;
+	                        case 5: /*(Wohnung) Anzahl Zimmer aendern*/
+	                            w = (Wohnung)o;
+	                            Console.WriteLine("Die Wohnung hat derzeit: " + w.getAnzZimmer().ToString() + ".");
+	                            Console.Write("Geben Sie die neue Anzahl an Zimmern ein (leer lassen um abzubrechen): ");
+	                            temp = Console.ReadLine();
+	                            if (temp != string.Empty)
+	                            {
+	                                w.setAnzZimmer(int.Parse(temp));
+	                                Console.Clear();
+	                                Console.WriteLine("Die Wohnung hat jetzt " + w.getAnzZimmer().ToString() + " Zimmer.");
+	                            }
+	                            else
+	                            {
+	                                break;
+	                            }
+	                            break;
+	                        case 6: /*(Wohnung) Badewanne/Dusche*/
+	                            w = (Wohnung)o;
+	                            if (w.getBD() == true)
+	                            {
+	                                Console.WriteLine("Die Wohnung hat eine Badewanne. Wollen Sie eine Dusche eintragen? (J/N) ");
+	                                temp = Console.ReadLine();
+	                                if (temp.ToLower().StartsWith("j"))
+	                                {
+	                                    w.setBD(false);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Die Wohnung hat jetzt eine Dusche.");
+	                                }
+	                                else
+	                                {
+	                                    break;
+	                                }
+	                            }
+	                            else
+	                            {
+	                                Console.WriteLine("Die Wohnung hat eine Dusche. Wollen Sie eine Badewanne eintragen? (J/N) ");
+	                                temp = Console.ReadLine();
+	                                if (temp.ToLower().StartsWith("j"))
+	                                {
+	                                    w.setBD(true);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Die Wohnung hat jetzt eine Badewanne.");
+	                                }
+	                                else
+	                                {
+	                                    break;
+	                                }
+	                            }
+	                            break;
+	                        case 7: /*(Haus) Mehrfamilienhaus*/
+	                            h = (Haus)o;
+	                            if (h.getMehrFHaus() == true)
+	                            {
+	                                Console.WriteLine("Das Haus ist ein Mehrfamilienhaus.");
+	                                Console.Write("Wollen Sie das ändern? (J/N) ");
+	                                temp = Console.ReadLine();
+	                                if (temp.ToLower().StartsWith("j"))
+	                                {
+	                                    h.setMehrFHaus(false);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Das Haus ist jetzt kein Mehrfamilienhaus mehr.");
+	                                }
+	                                else
+	                                {
+	                                    break;
+	                                }
+	                            }
+	                            else
+	                            {
+	                                Console.WriteLine("Das Haus ist kein Mehrfamilienhaus.");
+	                                Console.Write("Wollen Sie das ändern? (J/N) ");
+	                                temp = Console.ReadLine();
+	                                if (temp.ToLower().StartsWith("j"))
+	                                {
+	                                    h.setMehrFHaus(true);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Das Haus ist jetzt ein Mehrfamilienhaus.");
+	                                }
+	                                else
+	                                {
+	                                    break;
+	                                }
+	                            }
+	                            break;
+	                        case 8: /*(Haus) Anzahl Etagen*/
+	                            h = (Haus)o;
+	                            Console.WriteLine("Das Haus hat: " + h.getAnzEtagen().ToString() + " Etagen.");
+	                            Console.Write("Geben Sie die neue Anzahl der Etagen an (leer lassen um abzubrechen): ");
+	                            temp = Console.ReadLine();
+	                            if (temp != string.Empty)
+	                            {
+	                                h.setAnzEtagen(int.Parse(temp));
+	                                Console.Clear();
+	                                Console.WriteLine("Das Haus hat jetzt " + h.getAnzEtagen().ToString() + " Etagen.");
+	                            }
+	                            else
+	                            {
+	                                break;
+	                            }
+	                            break;
+	                        case 9: /*(Haus) Keller*/
+	                            h = (Haus)o;
+	                            if (h.getKeller() == true)
+	                            {
+	                                Console.WriteLine("Das Haus hat einen Keller.");
+	                                Console.Write("Wollen Sie das ändern? (J/N) ");
+	                                temp = Console.ReadLine();
+	                                if (temp.ToLower().StartsWith("j"))
+	                                {
+	                                    h.setKeller(false);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Das Haus hat jetzt keinen Keller mehr. ");
+	                                }
+	                                else
+	                                {
+	                                    break;
+	                                }
+	                            }
+	                            else
+	                            {
+	                                Console.WriteLine("Das Haus hat keinen Keller.");
+	                                Console.Write("Wollen Sie das ändern? (J/N) ");
+	                                temp = Console.ReadLine();
+	                                if (temp.ToLower().StartsWith("j"))
+	                                {
+	                                    h.setKeller(true);
+	                                    Console.Clear();
+	                                    Console.WriteLine("Das Haus hat jetzt einen Keller.");
+	                                }
+	                                else
+	                                {
+	                                    break;
+	                                }
+	                            }
+	                            break;
+	                        case 10: /*(Grundstueck) Widmung*/
+	                            g = (Grundstueck)o;
+	                            Console.WriteLine("Die derzeitige Widmung des Grundstücks ist: " + g.getWidmung() + ".");
+	                            Console.Write("Wollen Sie einen Baugrund (1) \n\r oder eine Geschaeftsflaeche (2) daraus machen? (leer lassen um abzubrechen) ");
+	                            temp = Console.ReadLine();
+	                            if (temp != string.Empty)
+	                            {
+	                                switch (temp)
+	                                {
+	                                    case "1":
+	                                        g.setWidmung(1);
+	                                        Console.Clear();
+	                                        Console.WriteLine("Das Grundstück ist jetzt ein Baugrund.");
+	                                        break;
+	                                    case "2":
+	                                        Console.Clear();
+	                                        Console.WriteLine("Das Grundstück ist jetzt eine Geschäftsfläche.");
+	                                        g.setWidmung(2);
+	                                        break;
+	                                }
+	                            }
+	                            else
+	                            {
+	                                break;
+	                            }
+	                            break;
+	                        case 11: /*(Grundstueck) Einheitswert*/
+	                            g = (Grundstueck)o;
+	                            Console.WriteLine("Der Einheitswert beträgt derzeit: " + g.getEW() + ".");
+	                            Console.Write("Geben Sie den neuen Einheitswert an (leer lassen um abzubrechen): ");
+	                            temp = Console.ReadLine();
+	                            if (temp != string.Empty)
+	                            {
+	                                g.setEW(double.Parse(temp));
+	                                Console.Clear();
+	                                Console.WriteLine("Der neue Einheitswert beträgt " + g.getEW().ToString() + ".");
+	                            }
+	                            else
+	                            {
+	                                break;
+	                            }
+	                            break;
+	                    }
+	                }
+	            }
+			}catch(Exception ex){
+				throw;
+			}
         }
         #endregion
         #region output

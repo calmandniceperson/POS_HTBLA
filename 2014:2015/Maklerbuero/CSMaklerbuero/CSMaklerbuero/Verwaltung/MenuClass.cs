@@ -12,10 +12,6 @@ namespace CSMaklerbuero
 {
     public class MenuClass
     {
-        public MenuClass()
-        {
-        }
-
 
         /*
          * BASISMENUE
