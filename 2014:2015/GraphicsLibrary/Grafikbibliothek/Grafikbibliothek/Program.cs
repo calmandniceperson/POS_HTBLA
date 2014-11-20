@@ -12,6 +12,7 @@ namespace Grafikbibliothek
 	{
 		public static void Main (string[] args)
 		{
+			bool repeat = false;
 			MenuClass mc = new MenuClass ();
 			Verwaltung v = new Verwaltung ();
 			string ant = string.Empty;
@@ -36,25 +37,46 @@ namespace Grafikbibliothek
 					}
 					break;
 				case 2:
-					Console.Write("Geben Sie die ID des Objekts ein, das Sie bearbeiten wollen: ");
-					tempint = int.Parse(Console.ReadLine());
-					switch(mc.showEditMenu()){
-					case 1:
-						v.editObject(1, tempint, mc);
-						break;
-					case 2:
-						v.editObject(2, tempint);
-						break;
-					}
+					do{
+						try{
+							Console.Write("Geben Sie die ID des Objekts ein, das Sie bearbeiten wollen: ");
+							tempint = int.Parse(Console.ReadLine());
+							switch(mc.showEditMenu()){
+								case 1:
+									v.editObject(1, tempint, mc);
+									break;
+								case 2:
+									v.editObject(2, tempint);
+									break;
+							}
+							repeat = false;
+						}catch(Exception){
+							repeat = true;
+						}
+					}while(repeat == true);
 					break;
 				case 3:
-					Console.Write("Geben Sie die ID des Objekts ein, das Sie löschen wollen: ");
-					v.deleteObject(int.Parse(Console.ReadLine()));
+					do{
+						try{
+							Console.Write("Geben Sie die ID des Objekts ein, das Sie löschen wollen: ");
+							v.deleteObject(int.Parse(Console.ReadLine()));
+							repeat = false;
+						}catch(Exception){
+							repeat = true;
+						}
+					}while(repeat == true);
 					break;
 				case 4:
-					Console.Write("Geben Sie die ID des Objekts ein, das Sie bearbeiten wollen: ");
-					tempint = int.Parse(Console.ReadLine());
-					v.printObject(tempint);
+					do{
+						try{
+							Console.Write("Geben Sie die ID des Objekts ein, das Sie bearbeiten wollen: ");
+							tempint = int.Parse(Console.ReadLine());
+							v.printObject(tempint);
+							repeat = false;
+						}catch(Exception){
+							repeat = true;
+						}
+					}while(repeat == true);
 					break;
 				case 5:
 					v.printAll();

@@ -13,7 +13,7 @@ namespace Grafikbibliothek
 
 		new public void draw(){
 			base.draw ();
-			Console.WriteLine ("Das Objekt ist ein Rechteckt.");
+			Console.WriteLine ("Das Objekt ist ein Rechteck.");
 			Console.WriteLine ("Höhe: " + (xd*2));
 			Console.WriteLine ("Breite: " + (yd*2));
 			Console.WriteLine ("Obere linke Ecke Koordinaten: (" + (getPunkt ().getXCoord () - xd).ToString () + "," + (getPunkt ().getYCoord () + yd).ToString () + ")");

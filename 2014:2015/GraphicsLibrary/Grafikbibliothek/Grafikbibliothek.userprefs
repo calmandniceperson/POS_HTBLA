@@ -2,12 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Grafikbibliothek/Verwaltung/Verwaltung.cs">
     <Files>
-      <File FileName="Grafikbibliothek/Program.cs" Line="32" Column="32" />
-      <File FileName="Grafikbibliothek/Verwaltung/Verwaltung.cs" Line="3" Column="3" />
-      <File FileName="Grafikbibliothek/Klassen/Abgeleitete_Klassen/CKreis.cs" Line="17" Column="17" />
-      <File FileName="Grafikbibliothek/Klassen/Abgeleitete_Klassen/CLinie.cs" Line="7" Column="7" />
-      <File FileName="Grafikbibliothek/Klassen/Abgeleitete_Klassen/CQuadrat.cs" Line="7" Column="7" />
-      <File FileName="Grafikbibliothek/Klassen/Abgeleitete_Klassen/CRechteck.cs" Line="25" Column="25" />
+      <File FileName="Grafikbibliothek/Program.cs" Line="1" Column="1" />
+      <File FileName="Grafikbibliothek/Verwaltung/Verwaltung.cs" Line="13" Column="13" />
+      <File FileName="Grafikbibliothek/Klassen/Abgeleitete_Klassen/CKreis.cs" Line="1" Column="1" />
+      <File FileName="Grafikbibliothek/Klassen/Abgeleitete_Klassen/CLinie.cs" Line="1" Column="1" />
+      <File FileName="Grafikbibliothek/Klassen/Abgeleitete_Klassen/CQuadrat.cs" Line="1" Column="1" />
+      <File FileName="Grafikbibliothek/Klassen/Abgeleitete_Klassen/CRechteck.cs" Line="1" Column="1" />
+      <File FileName="Grafikbibliothek/Verwaltung/MenuClass.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

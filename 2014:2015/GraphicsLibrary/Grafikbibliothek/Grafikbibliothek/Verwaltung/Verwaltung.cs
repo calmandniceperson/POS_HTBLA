@@ -6,10 +6,8 @@ namespace Grafikbibliothek
 {
 	public class Verwaltung
 	{
-		public Verwaltung ()
-		{
-		}
 
+		bool repeat = false;
 		int objnr; //nummer fuer die liste
 		CGraphObj tempobj; //temporaeres objekt
 		double x, y, xd, yd, radius, seitenlaenge; //zusatzinfos
@@ -28,41 +26,57 @@ namespace Grafikbibliothek
 				objnr = Convert.ToInt32(preid);
 			}
 
-			Console.Write ("Geben Sie die x-Koordinate des Mittelpunkts ein: ");
-			x = double.Parse (Console.ReadLine ());
-			Console.Write ("Geben Sie die y-Koordinate des Mittelpunkts ein: ");
-			y = double.Parse (Console.ReadLine ());
-
-			switch (type) {
-			case 1:
-				Console.Write ("Geben Sie an, wie weit die Endpunkte horizontal vom Mittelpunkt entfernt sind: ");
-				xd = double.Parse (Console.ReadLine ());
-				Console.Write ("Geben Sie an, wie weit die Endpunkte vertikal vom Mittelpunkt entfernt sind: ");
-				yd = double.Parse (Console.ReadLine ());
-				graphList.Add (new CLinie (objnr, x, y, xd, yd));
-				printObject (objnr);
-				break;
-			case 2:
-				Console.WriteLine ("Geben Sie die Höhe an: ");
-				xd = double.Parse (Console.ReadLine ());
-				Console.WriteLine ("Geben Sie die Breite an: ");
-				yd = double.Parse (Console.ReadLine ());
-				graphList.Add (new CRechteck (objnr, x, y, xd, yd));
-				printObject (objnr);
-				break;
-			case 3:
-				Console.Write ("Geben Sie den Radius des Kreises an: ");
-				radius = double.Parse (Console.ReadLine ());
-				graphList.Add (new CKreis (objnr, x, y, radius));
-				printObject (objnr);
-				break;
-			case 4:
-				Console.Write ("Geben Sie die Länge einer Seite an: ");
-				seitenlaenge = double.Parse (Console.ReadLine ());
-				graphList.Add (new CQuadrat (objnr, x, y, seitenlaenge));
-				printObject (objnr);
-				break;
+			try{
+				Console.Write ("Geben Sie die x-Koordinate des Mittelpunkts ein: ");
+				x = double.Parse (Console.ReadLine ());
+				Console.Write ("Geben Sie die y-Koordinate des Mittelpunkts ein: ");
+				y = double.Parse (Console.ReadLine ());
+			}catch(Exception){
+				Console.Clear ();
+				newObjekt (type, preid);
 			}
+				
+			do {
+				try {
+					switch (type) {
+					case 1:
+						Console.Write ("Geben Sie an, wie weit die Endpunkte horizontal vom Mittelpunkt entfernt sind: ");
+						xd = double.Parse (Console.ReadLine ());
+						Console.Write ("Geben Sie an, wie weit die Endpunkte vertikal vom Mittelpunkt entfernt sind: ");
+						yd = double.Parse (Console.ReadLine ());
+						graphList.Add (new CLinie (objnr, x, y, xd, yd));
+						printObject (objnr);
+						break;
+					case 2:
+						Console.WriteLine ("Geben Sie die Höhe an: ");
+						xd = double.Parse (Console.ReadLine ());
+						Console.WriteLine ("Geben Sie die Breite an: ");
+						yd = double.Parse (Console.ReadLine ());
+						graphList.Add (new CRechteck (objnr, x, y, xd, yd));
+						printObject (objnr);
+						break;
+					case 3:
+						Console.Write ("Geben Sie den Radius des Kreises an: ");
+						radius = double.Parse (Console.ReadLine ());
+						graphList.Add (new CKreis (objnr, x, y, radius));
+						printObject (objnr);
+						break;
+					case 4:
+						Console.Write ("Geben Sie die Länge einer Seite an: ");
+						seitenlaenge = double.Parse (Console.ReadLine ());
+						graphList.Add (new CQuadrat (objnr, x, y, seitenlaenge));
+						printObject (objnr);
+						break;
+					}
+
+					repeat = false;
+
+				} catch (Exception) {
+					//throw;
+					Console.Clear();
+					repeat = true;
+				}
+			} while(repeat == true);
 		}
 		#endregion
 
@@ -90,18 +104,30 @@ namespace Grafikbibliothek
 				}
 				break;
 			case 2:
-				Console.WriteLine ("Um welchen Wert wollen Sie das Objekt an der X-Achse verschieben? ");
-				x = int.Parse (Console.ReadLine ());
-				Console.WriteLine ("Um welchen Wert wollen Sie das Objekt an der Y-Achse verschieben? ");
-				y = int.Parse (Console.ReadLine ());
+				do{
+					try{
+						Console.WriteLine ("Um welchen Wert wollen Sie das Objekt an der X-Achse verschieben? ");
+						x = int.Parse (Console.ReadLine ());
+						Console.WriteLine ("Um welchen Wert wollen Sie das Objekt an der Y-Achse verschieben? ");
+						y = int.Parse (Console.ReadLine ());
 
-				getObjectById (id).move (x, y);
+						getObjectById (id).move (x, y);
+						repeat = false;
+					}catch(TestException t){
+						Console.WriteLine(t.ToString()); //test
+						repeat = true;
+					}
+				}while(repeat == true);
 				break;
 			}
 		}
 
 		public void deleteObject(int id){
-			graphList.Remove (getObjectById (id));
+			try{
+				graphList.Remove (getObjectById (id));
+			}catch(Exception e){
+				throw e;
+			}
 		}
 		#endregion
 

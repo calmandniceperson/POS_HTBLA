@@ -43,6 +43,7 @@
     <Compile Include="Klassen\Abgeleitete_Klassen\CQuadrat.cs" />
     <Compile Include="Verwaltung\Verwaltung.cs" />
     <Compile Include="Verwaltung\MenuClass.cs" />
+    <Compile Include="TestException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
