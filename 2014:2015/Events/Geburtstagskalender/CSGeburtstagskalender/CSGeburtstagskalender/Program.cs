@@ -21,31 +21,44 @@ namespace CSGeburtstagskalender
 
 		public static void Main (string[] args)
 		{
+			startpoint:
+
 			string s;
 
 			Console.WriteLine ("Started: " + DateTime.Now.ToString ());
-
-			if(File.Exists("../../geburtstage.txt")){
-				while((s = mc.sr.ReadLine()) != null){
-					v.createNewErinnerung(
-						new DateTime(Convert.ToInt32(s.Split('_')[0].Split('/')[2]),
-					             Convert.ToInt32(s.Split('_')[0].Split('/')[1]),
-					             Convert.ToInt32(s.Split('_')[0].Split('/')[0]), 
-					             Convert.ToInt32(s.Split('_')[1].Split(':')[0]), 
-					             Convert.ToInt32(s.Split('_')[1].Split(':')[1]), 
-					             Convert.ToInt32(s.Split('_')[1].Split(':')[2])),
-						//DateTime.ParseExact(s.Split('_')[0] + " " + s.Split('_')[1], "dd/MM/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
-						s.Split('_')[2], /*name des geburtstagskinds*/
-						Convert.ToInt32(s.Split('_')[3]), /*wie viele tage zuvor erinnert werden soll*/
-						Convert.ToInt32(s.Split('_')[4])); /*anzahl erinnerungen*/
+			try{
+				if(File.Exists("../../geburtstage.txt")){
+					while((s = mc.sr.ReadLine()) != null){
+						v.createNewErinnerung(
+							new DateTime(Convert.ToInt32(s.Split('_')[0].Split('/')[2]),
+						             Convert.ToInt32(s.Split('_')[0].Split('/')[1]),
+						             Convert.ToInt32(s.Split('_')[0].Split('/')[0]), 
+						             Convert.ToInt32(s.Split('_')[1].Split(':')[0]), 
+						             Convert.ToInt32(s.Split('_')[1].Split(':')[1]), 
+						             Convert.ToInt32(s.Split('_')[1].Split(':')[2])),
+							//DateTime.ParseExact(s.Split('_')[0] + " " + s.Split('_')[1], "dd/MM/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
+							s.Split('_')[2], /*name des geburtstagskinds*/
+							Convert.ToInt32(s.Split('_')[3]), /*wie viele tage zuvor erinnert werden soll*/
+							Convert.ToInt32(s.Split('_')[4])); /*anzahl erinnerungen*/
+					}
 				}
+			}catch(FileLoadException fle){
+				Console.WriteLine (fle.ToString());
+				goto startpoint;
+			}catch(FileNotFoundException fnfe){
+				Console.WriteLine (fnfe.ToString());
+				goto startpoint;
 			}
 
 			Console.Clear ();
 
 			v.printAll();
 
-			InitTimer(mc);
+			try{
+				InitTimer(mc);
+			}catch(Exception e){
+				Console.WriteLine (e.ToString());
+			}
 
 			Console.ReadLine ();
 
