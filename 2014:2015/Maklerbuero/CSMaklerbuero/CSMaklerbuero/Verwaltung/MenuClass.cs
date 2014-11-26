@@ -19,18 +19,24 @@ namespace CSMaklerbuero
          */
         public int showMenu()
         {
-            Console.Clear();
-            Console.WriteLine("\tWas wollen Sie tun?\t");
-            Console.WriteLine("1 ... Neues Objekt anlegen");
-            Console.WriteLine("2 ... Bestimmtes Objekt löschen");
-            Console.WriteLine("3 ... Bestimmtes Objekt bearbeiten");
-            Console.WriteLine("4 ... Liste ausgeben");
-            Console.WriteLine("5 ... Nach bestimmten Kriterien ausgeben");
-            Console.WriteLine("6 ... Billigstes/Teuerstes/Durchschnitt");
-			Console.WriteLine ("7 ... Provision ausgeben");
+			try{
+	            Console.Clear();
+	            Console.WriteLine("\tWas wollen Sie tun?\t");
+	            Console.WriteLine("1 ... Neues Objekt anlegen");
+	            Console.WriteLine("2 ... Bestimmtes Objekt löschen");
+	            Console.WriteLine("3 ... Bestimmtes Objekt bearbeiten");
+	            Console.WriteLine("4 ... Liste ausgeben");
+	            Console.WriteLine("5 ... Nach bestimmten Kriterien ausgeben");
+				Console.WriteLine("6 ... Billigstes/Teuerstes/Durchschnitt");
+				Console.WriteLine("7 ... Provision ausgeben");
+				Console.WriteLine("8 ... Sortiert ausgeben");
 
-
-            return int.Parse(Console.ReadLine());
+	            return int.Parse(Console.ReadLine());
+			}catch(Exception){
+				showMenu ();
+				//Console.WriteLine (e.ToString());
+			}
+			return 0;
         }
 
         /*
@@ -39,16 +45,21 @@ namespace CSMaklerbuero
          */
         public int showSpecificSelectionMenu()
         {
-            Console.Clear();
-            Console.WriteLine("\tWas wollen Sie ausgeben?\t");
-            Console.WriteLine("1 ... Geben Sie ein Objekt mit einer bestimmten Nummer aus");
-            Console.WriteLine("2 ... Alle Objekte ausgeben, die zu Kaufen sind");
-            Console.WriteLine("3 ... Alle Objekte ausgeben, die zu Mieten sind");
-            Console.WriteLine("4 ... Alle Objekte ausgeben, die Häuser sind");
-            Console.WriteLine("5 ... Alle Objekte ausgeben, die Wohnungen sind");
-            Console.WriteLine("6 ... Alle Objekte ausgeben, die reine Grundstücke sind");
+			try{
+	            Console.Clear();
+	            Console.WriteLine("\tWas wollen Sie ausgeben?\t");
+	            Console.WriteLine("1 ... Geben Sie ein Objekt mit einer bestimmten Nummer aus");
+	            Console.WriteLine("2 ... Alle Objekte ausgeben, die zu Kaufen sind");
+	            Console.WriteLine("3 ... Alle Objekte ausgeben, die zu Mieten sind");
+	            Console.WriteLine("4 ... Alle Objekte ausgeben, die Häuser sind");
+	            Console.WriteLine("5 ... Alle Objekte ausgeben, die Wohnungen sind");
+	            Console.WriteLine("6 ... Alle Objekte ausgeben, die reine Grundstücke sind");
 
-            return int.Parse(Console.ReadLine());
+	            return int.Parse(Console.ReadLine());
+			}catch(Exception){
+				showSpecificSelectionMenu ();
+			}
+			return 0;
         }
 
         /*
@@ -56,88 +67,99 @@ namespace CSMaklerbuero
          */
         public int showEditMenu(string type)
         {
-            Console.WriteLine("\tWas wollen Sie editieren?\t");
-            Console.WriteLine("1 ... Maklername");
-            Console.WriteLine("2 ... Kaufen/Mieten");
-            Console.WriteLine("3 ... Preis");
-            Console.WriteLine("4 ... Fläche");
-            switch (type /*Haus, Wohnung oder Grundstueck*/)
-            {
-                //jeder Typ hat nochmal ein eigenes Untermenue (sieht "hübscher" aus)
-                case "Wohnung":
-                    Console.WriteLine("5 ... Anzahl Zimmer");
-                    Console.WriteLine("6 ... Badewanne/Dusche");
-                    break;
-                case "Haus":
-                    Console.WriteLine("5 ... Mehrfamilienhaus (Ja/Nein)");
-                    Console.WriteLine("6 ... Anzahl Etagen");
-                    Console.WriteLine("7 ... Keller (Ja/Nein)");
-                    break;
-                case "Grundstueck":
-                    Console.WriteLine("5 ... Widmung");
-                    Console.WriteLine("6 ... Einheitswert");
-                    break;
-            }
+			try{
+	            Console.WriteLine("\tWas wollen Sie editieren?\t");
+	            Console.WriteLine("1 ... Maklername");
+	            Console.WriteLine("2 ... Kaufen/Mieten");
+	            Console.WriteLine("3 ... Preis");
+	            Console.WriteLine("4 ... Fläche");
 
-            int temp = int.Parse(Console.ReadLine());
+				try{
+		            switch (type /*Haus, Wohnung oder Grundstueck*/)
+		            {
+		                //jeder Typ hat nochmal ein eigenes Untermenue (sieht "hübscher" aus)
+		                case "Wohnung":
+		                    Console.WriteLine("5 ... Anzahl Zimmer");
+		                    Console.WriteLine("6 ... Badewanne/Dusche");
+		                    break;
+		                case "Haus":
+		                    Console.WriteLine("5 ... Mehrfamilienhaus (Ja/Nein)");
+		                    Console.WriteLine("6 ... Anzahl Etagen");
+		                    Console.WriteLine("7 ... Keller (Ja/Nein)");
+		                    break;
+		                case "Grundstueck":
+		                    Console.WriteLine("5 ... Widmung");
+		                    Console.WriteLine("6 ... Einheitswert");
+		                    break;
+		            }
+				}catch(Exception){
+					showEditMenu(type);
+				}
 
-            /*
-             * falls die Auswahl des Nutzers außerhalb des Bereichs liegt, der fuer alle Objekte gilt
-             * z.B.: wohnungsspezifische Optionen
-             */
-            if (temp == 5 || temp == 6 || temp == 7)
-            {
-                switch (type)
-                {
-                    /*
-                     * Wohnung faellt weg, weil es der Standard fuer 5 und 6 ist, weil es oben als 1. gelistet ist
-                     * Je nach Typ wird die Auswahl im nachhinein so manipuliert, dass sie für den gewählten Typ gilt
-                     */
-                    case "Haus":
-                        if (temp == 5)
-                        {
-                            temp = 7;
-                        }
-                        else if (temp == 6)
-                        {
-                            temp = 8;
-                        }
-                        else if (temp == 7)
-                        {
-                            temp = 9;
-                        }
-                        break;
-                    case "Grundstueck":
-                        if (temp == 5)
-                        {
-                            temp = 10;
-                        }
-                        else if (temp == 6)
-                        {
-                            temp = 11;
-                        }
-                        break;
-                }
-            }
+	            int temp = int.Parse(Console.ReadLine());
 
-            /* TEMP OPTIONEN
-             * 
-            Damit das Menue schoener bleibt, wird temp im nachhinein veraendert.
-            temp = 1 -> Maklername aendern
-            temp = 2 -> Kaufen/Mieten aendern
-            temp = 3 -> Preis aendern
-            temp = 4 -> Flaeche aendern
-            temp = 5 -> (Wohnung) Anzahl Zimmer aendern
-            temp = 6 -> (Wohnung) Badewanne/Dusche aendern
-            temp = 7 -> (Haus) Mehfamilienhaus (Ja/Nein) aendern
-            temp = 8 -> (Haus) Anzahl Etagen aendern
-            temp = 9 -> (Haus) Keller (Ja/Nein) aendern
-            temp = 10 -> (Grundstueck) Widmung aendern
-            temp = 11 -> (Grundstueck) Einheitswert aendern
-            *
-            */
+	            /*
+	             * falls die Auswahl des Nutzers außerhalb des Bereichs liegt, der fuer alle Objekte gilt
+	             * z.B.: wohnungsspezifische Optionen
+	             */
+	            if (temp == 5 || temp == 6 || temp == 7)
+	            {
+	                switch (type)
+	                {
+	                    /*
+	                     * Wohnung faellt weg, weil es der Standard fuer 5 und 6 ist, weil es oben als 1. gelistet ist
+	                     * Je nach Typ wird die Auswahl im nachhinein so manipuliert, dass sie für den gewählten Typ gilt
+	                     */
+	                    case "Haus":
+	                        if (temp == 5)
+	                        {
+	                            temp = 7;
+	                        }
+	                        else if (temp == 6)
+	                        {
+	                            temp = 8;
+	                        }
+	                        else if (temp == 7)
+	                        {
+	                            temp = 9;
+	                        }
+	                        break;
+	                    case "Grundstueck":
+	                        if (temp == 5)
+	                        {
+	                            temp = 10;
+	                        }
+	                        else if (temp == 6)
+	                        {
+	                            temp = 11;
+	                        }
+	                        break;
+	                }
+	            }
 
-            return temp;
+	            /* TEMP OPTIONEN
+	             * 
+	            Damit das Menue schoener bleibt, wird temp im nachhinein veraendert.
+	            temp = 1 -> Maklername aendern
+	            temp = 2 -> Kaufen/Mieten aendern
+	            temp = 3 -> Preis aendern
+	            temp = 4 -> Flaeche aendern
+	            temp = 5 -> (Wohnung) Anzahl Zimmer aendern
+	            temp = 6 -> (Wohnung) Badewanne/Dusche aendern
+	            temp = 7 -> (Haus) Mehfamilienhaus (Ja/Nein) aendern
+	            temp = 8 -> (Haus) Anzahl Etagen aendern
+	            temp = 9 -> (Haus) Keller (Ja/Nein) aendern
+	            temp = 10 -> (Grundstueck) Widmung aendern
+	            temp = 11 -> (Grundstueck) Einheitswert aendern
+	            *
+	            */
+
+	            return temp;
+			}catch(Exception){
+				showEditMenu (type);
+			}
+
+			return 0;
         }
 
         /*

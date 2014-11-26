@@ -15,6 +15,7 @@ namespace CSMaklerbuero
     public class Verwaltung
     {
         List<Objekt> objListe = new List<Objekt>(); /*Liste der eingetragenen Objekte*/
+		List<Objekt> sortedList = new List<Objekt>();
 
         /*TEMPORARIES*/
         Wohnung w;
@@ -521,6 +522,7 @@ namespace CSMaklerbuero
 
         public void printResult(Objekt o)
         {
+			Console.WriteLine ();
             Console.WriteLine("Objektnummer: " + o.getObjNr().ToString());
             Console.WriteLine("Name d. Maklers: " + o.getMakler());
             if (o.getTKM() == true)
@@ -581,14 +583,26 @@ namespace CSMaklerbuero
             }
         }
 
-        public void printAll()
+		public void printAll(int listenwahl = 0)
         {
             Console.Clear();
-            foreach (Objekt o in objListe)
-            {
-                printResult(o);
-            }
+			if (listenwahl == 0) {
+				foreach (Objekt o in objListe) {
+					printResult (o);
+				}
+			} else {
+				foreach (Objekt o in sortedList) {
+					printResult (o);
+				}
+			}
         }
+
+		public void printAllSorted(){
+
+			//sortiert nach dem Namen des Objekttyps
+			objListe.Sort (new ObjektComparer ());
+			printAll ();
+		}
 
         public void printSelection(int what, Nullable<int> optnr = null)
         {

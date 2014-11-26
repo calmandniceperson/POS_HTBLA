@@ -10,7 +10,7 @@ using System;
 
 namespace CSMaklerbuero
 {
-    public class Objekt
+	public class Objekt:IComparable
     {
         int objNr; /*ID-Nummer des Objekts (Grund oder Gebaeude)*/
         string makler; /*Name des zustaendigen Maklers*/
@@ -37,6 +37,11 @@ namespace CSMaklerbuero
 			return getKosten ();
 		}
 		#endregion
+
+		public int CompareTo(object o)
+		{
+			return this.GetType ().Name.CompareTo (((Objekt)o).GetType ().Name);
+		}
 
         #region GET
         public int getObjNr()

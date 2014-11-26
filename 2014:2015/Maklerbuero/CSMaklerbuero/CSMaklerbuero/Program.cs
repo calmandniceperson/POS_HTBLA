@@ -32,7 +32,11 @@ namespace CSMaklerbuero
 	                        v.deleteObjekt(int.Parse(Console.ReadLine())); //loescht das gewählte Objekt
 	                        break;
 	                    case 3:
-	                        Console.Write("Welches Objekt wollen Sie bearbeiten (Geben Sie die Objektnummer ein)? ");
+							try{
+		                        Console.Write("Welches Objekt wollen Sie bearbeiten (Geben Sie die Objektnummer ein)? ");
+							}catch(Exception e){
+								throw e;
+							}
 
 	                        /*
 	                         editObjekt ruft die Methode showEditMenu() auf fuer die weitere Auswahl
@@ -78,6 +82,9 @@ namespace CSMaklerbuero
 						case 7:
 							Console.Write("Für welches Objekt wollen Sie die Provision ausgeben? (Objektnummer) ");
 						v.printProvision(int.Parse(Console.ReadLine()));
+							break;
+						case 8:
+							v.printAllSorted();
 							break;
 	                }
 	                Console.WriteLine();

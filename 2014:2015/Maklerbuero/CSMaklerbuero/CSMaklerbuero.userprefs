@@ -1,13 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSMaklerbuero/Verwaltung/MenuClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSMaklerbuero/ObjektComparer.cs">
     <Files>
-      <File FileName="CSMaklerbuero/Program.cs" Line="16" Column="16" />
-      <File FileName="CSMaklerbuero/Verwaltung/Verwaltung.cs" Line="10" Column="10" />
-      <File FileName="CSMaklerbuero/Klassen/Abgeleitete_Klassen/Haus.cs" Line="1" Column="1" />
-      <File FileName="CSMaklerbuero/Klassen/Abgeleitete_Klassen/Wohnung.cs" Line="1" Column="1" />
-      <File FileName="CSMaklerbuero/Klassen/Abgeleitete_Klassen/Grundstueck.cs" Line="1" Column="1" />
-      <File FileName="CSMaklerbuero/Verwaltung/MenuClass.cs" Line="6" Column="6" />
+      <File FileName="CSMaklerbuero/Program.cs" Line="14" Column="14" />
+      <File FileName="CSMaklerbuero/Verwaltung/Verwaltung.cs" Line="4" Column="4" />
+      <File FileName="CSMaklerbuero/Klassen/Objekt.cs" Line="72" Column="72" />
+      <File FileName="CSMaklerbuero/ObjektComparer.cs" Line="4" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
