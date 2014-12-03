@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="hardwareTab">
      <attribute name="title">
@@ -70,6 +70,47 @@
     <widget class="QWidget" name="serviceTab">
      <attribute name="title">
       <string>Tab 2</string>
+     </attribute>
+     <widget class="QPushButton" name="osInstallButton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>161</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Operating System Installation</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="networkServiceButton">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>0</y>
+        <width>161</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Network Services</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="configureTab">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="cartTab">
+     <attribute name="title">
+      <string>Page</string>
      </attribute>
     </widget>
    </widget>

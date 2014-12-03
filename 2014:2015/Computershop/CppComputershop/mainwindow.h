@@ -10,9 +10,11 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+public slots:
+    void handleProductSelectionChanged(int);
+    void handleTabClick(int);
 
 public:
-    void handleProductSelectionChanged(int);
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
