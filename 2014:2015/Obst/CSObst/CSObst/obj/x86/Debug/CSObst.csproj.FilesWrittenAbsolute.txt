@@ -1,0 +1,5 @@
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Obst/CSObst/CSObst/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Obst/CSObst/CSObst/bin/Debug/CSObst.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Obst/CSObst/CSObst/bin/Debug/CSObst.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Obst/CSObst/CSObst/obj/x86/Debug/CSObst.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Obst/CSObst/CSObst/obj/x86/Debug/CSObst.exe.mdb
