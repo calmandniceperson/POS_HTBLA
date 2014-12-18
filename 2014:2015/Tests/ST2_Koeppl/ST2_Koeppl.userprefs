@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ST2_Koeppl/Program.cs">
+    <Files>
+      <File FileName="ST2_Koeppl/Program.cs" Line="18" Column="18" />
+      <File FileName="ST2_Koeppl/Kunde.cs" Line="4" Column="4" />
+      <File FileName="ST2_Koeppl/Bankkunde.cs" Line="5" Column="5" />
+      <File FileName="ST2_Koeppl/Versicherungskunde.cs" Line="49" Column="49" />
+      <File FileName="ST2_Koeppl/Verwaltung.cs" Line="34" Column="34" />
+      <File FileName="ST2_Koeppl/Menu.cs" Line="34" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,5 @@
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/ST2_Koeppl/ST2_Koeppl/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/ST2_Koeppl/ST2_Koeppl/bin/Debug/ST2_Koeppl.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/ST2_Koeppl/ST2_Koeppl/bin/Debug/ST2_Koeppl.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/ST2_Koeppl/ST2_Koeppl/obj/x86/Debug/ST2_Koeppl.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/ST2_Koeppl/ST2_Koeppl/obj/x86/Debug/ST2_Koeppl.exe.mdb
