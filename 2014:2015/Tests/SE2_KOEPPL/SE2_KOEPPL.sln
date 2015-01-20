@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE2_KOEPPL", "SE2_KOEPPL\SE2_KOEPPL.csproj", "{6E7CE03C-F389-4A20-A11A-F751054625CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E7CE03C-F389-4A20-A11A-F751054625CB}.Debug|x86.ActiveCfg = Debug|x86
+		{6E7CE03C-F389-4A20-A11A-F751054625CB}.Debug|x86.Build.0 = Debug|x86
+		{6E7CE03C-F389-4A20-A11A-F751054625CB}.Release|x86.ActiveCfg = Release|x86
+		{6E7CE03C-F389-4A20-A11A-F751054625CB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal

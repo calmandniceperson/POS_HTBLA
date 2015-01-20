@@ -1,0 +1,15 @@
+Bilderleiste        10          7
+Kupfernägel         100         200
+Zimmerbleistift     50          20
+Maurerkelle         30          35
+Schiebetruhe        5           1
+Senkblei            10          15
+Pinsel              30          20
+Abziehlatte         15          10
+Zement              500         350
+Kalk                300         400
+Fugenbunt           70          90
+Mischmaschine       2           1
+Rasenmäher          5           3
+Grassamen           40          45
+Dünger              40          40

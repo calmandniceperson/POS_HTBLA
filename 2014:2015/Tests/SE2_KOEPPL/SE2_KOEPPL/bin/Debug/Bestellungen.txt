@@ -1,0 +1,17 @@
+BESTELLUNG
+Name: Bilderleiste	Mindestbestand: 10	Aktueller Bestand: 7
+BESTELLUNG
+Name: Zimmerbleistift	Mindestbestand: 50	Aktueller Bestand: 20
+BESTELLUNG
+Name: Schiebetruhe	Mindestbestand: 5	Aktueller Bestand: 1
+BESTELLUNG
+Name: Pinsel	Mindestbestand: 30	Aktueller Bestand: 20
+BESTELLUNG
+Name: Abziehlatte	Mindestbestand: 15	Aktueller Bestand: 10
+BESTELLUNG
+Name: Zement	Mindestbestand: 500	Aktueller Bestand: 350
+BESTELLUNG
+Name: Mischmaschine	Mindestbestand: 2	Aktueller Bestand: 1
+BESTELLUNG
+Name: Rasenm�her	Mindestbestand: 5	Aktueller Bestand: 3
+

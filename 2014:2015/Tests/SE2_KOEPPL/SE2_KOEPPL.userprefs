@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="SE2_KOEPPL/SE2_KOEPPL.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SE2_KOEPPL/Program.cs">
+    <Files>
+      <File FileName="SE2_KOEPPL/Program.cs" Line="37" Column="37" />
+      <File FileName="SE2_KOEPPL/Lager.cs" Line="25" Column="25" />
+      <File FileName="SE2_KOEPPL/Verwaltung.cs" Line="16" Column="16" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
