@@ -1,0 +1,10 @@
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/CSStackEventsException/CSStackEventsException/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/CSStackEventsException/CSStackEventsException/bin/Debug/CSStackEventsException.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/CSStackEventsException/CSStackEventsException/bin/Debug/CSStackEventsException.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/CSStackEventsException/CSStackEventsException/obj/x86/Debug/CSStackEventsException.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/CSStackEventsException/CSStackEventsException/obj/x86/Debug/CSStackEventsException.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/StackEventException/CSStackEventsException/CSStackEventsException/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/StackEventException/CSStackEventsException/CSStackEventsException/bin/Debug/CSStackEventsException.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/StackEventException/CSStackEventsException/CSStackEventsException/bin/Debug/CSStackEventsException.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/StackEventException/CSStackEventsException/CSStackEventsException/obj/x86/Debug/CSStackEventsException.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/StackEventException/CSStackEventsException/CSStackEventsException/obj/x86/Debug/CSStackEventsException.exe.mdb
