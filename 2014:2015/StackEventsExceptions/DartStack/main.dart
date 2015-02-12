@@ -14,9 +14,13 @@ void main(){
 
   String answer;
 
-  print('What capacity do you want your list to have? ');
-  var cap = int.parse(stdin.readLineSync());
-  var myStack = new Stack(cap);
+  try{
+    print('What capacity do you want your list to have? ');
+    var cap = int.parse(stdin.readLineSync());
+    var myStack = new Stack(cap);
+  }catch(exception){
+    print(exception);
+  }
 
   do{
     switch(menu()){
