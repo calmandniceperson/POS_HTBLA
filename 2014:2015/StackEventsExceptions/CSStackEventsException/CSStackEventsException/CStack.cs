@@ -43,6 +43,10 @@ namespace CSStackEventsException
 			return string.Empty;
 		}
 
+		public void clear(){
+			Stack.Clear ();
+		}
+
 		public event StackDelegate underFlow;
 	}
 

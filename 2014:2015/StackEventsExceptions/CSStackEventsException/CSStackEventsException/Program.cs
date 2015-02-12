@@ -27,8 +27,6 @@ namespace CSStackEventsException
 					var myStack = new CStack (cap);
 					myStack.underFlow += myStack_underflow;
 
-
-
 					do {
 						switch(menu()){
 						case 1:
@@ -38,7 +36,11 @@ namespace CSStackEventsException
 						case 2:
 							Console.WriteLine(myStack.pop());
 							break;
+						case 3:
+							myStack.clear();
+							break;
 						}
+
 
 						Console.WriteLine ("Wollen Sie noch eine Aktion ausfuehren? (j/n) ");
 						ant = Console.ReadLine ();
@@ -65,6 +67,7 @@ namespace CSStackEventsException
 			Console.Clear ();
 			Console.WriteLine ("1 ... Push Element");
 			Console.WriteLine ("2 ... Pop Element");
+			Console.WriteLine ("3 ... Clear");
 
 			return int.Parse (Console.ReadLine ());
 		}

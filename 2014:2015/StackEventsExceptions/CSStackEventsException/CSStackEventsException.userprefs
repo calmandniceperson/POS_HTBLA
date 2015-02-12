@@ -1,1 +1,13 @@
-﻿<Properties StartupItem="CSStackEventsException/CSStackEventsException.csproj" />
+﻿<Properties StartupItem="CSStackEventsException/CSStackEventsException.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSStackEventsException/CStack.cs">
+    <Files>
+      <File FileName="CSStackEventsException/Program.cs" Line="67" Column="67" />
+      <File FileName="CSStackEventsException/CStack.cs" Line="4" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
