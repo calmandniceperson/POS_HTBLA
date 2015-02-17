@@ -1,0 +1,5 @@
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Lotto/CSLotto/CSLotto/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Lotto/CSLotto/CSLotto/bin/Debug/CSLotto.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Lotto/CSLotto/CSLotto/bin/Debug/CSLotto.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Lotto/CSLotto/CSLotto/obj/x86/Debug/CSLotto.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Lotto/CSLotto/CSLotto/obj/x86/Debug/CSLotto.exe.mdb

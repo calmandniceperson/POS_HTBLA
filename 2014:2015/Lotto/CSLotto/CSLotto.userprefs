@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="CSLotto/CSLotto.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSLotto/Program.cs">
+    <Files>
+      <File FileName="CSLotto/Program.cs" Line="10" Column="10" />
+      <File FileName="CSLotto/Tipp.cs" Line="29" Column="29" />
+      <File FileName="CSLotto/TippVerwaltung.cs" Line="4" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
