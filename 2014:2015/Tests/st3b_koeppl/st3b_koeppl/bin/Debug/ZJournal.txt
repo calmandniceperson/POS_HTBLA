@@ -1,0 +1,14 @@
+Huber 8,2 16,3
+Maier 8,1 15,9
+Bauer 7,9 17,3
+Huber 8,1 16,1
+Huber 7,9 15,7
+Maier 9,5 14,4
+Bauer 8,5 17,2
+Huber 8,0 17,1
+Bauer 7,8 16,3
+Maier 7,0 16,9
+Huber 7,0 18,5
+Maier 9,3 14,4
+Bauer 8,0 15,5
+Bauer 9,0 14,0
