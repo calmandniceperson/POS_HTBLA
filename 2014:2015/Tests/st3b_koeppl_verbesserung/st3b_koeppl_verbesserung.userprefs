@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="st3b_koeppl_verbesserung/st3b_koeppl_verbesserung.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="st3b_koeppl_verbesserung/CFirma.cs">
+    <Files>
+      <File FileName="st3b_koeppl_verbesserung/Program.cs" Line="16" Column="16" />
+      <File FileName="st3b_koeppl_verbesserung/Mitarbeiter.cs" Line="68" Column="68" />
+      <File FileName="st3b_koeppl_verbesserung/CFirma.cs" Line="3" Column="3" />
+      <File FileName="st3b_koeppl_verbesserung/IWTUE.cs" Line="3" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

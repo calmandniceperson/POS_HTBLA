@@ -1,0 +1,5 @@
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/st3b_koeppl_verbesserung/st3b_koeppl_verbesserung/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/st3b_koeppl_verbesserung/st3b_koeppl_verbesserung/bin/Debug/st3b_koeppl_verbesserung.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/st3b_koeppl_verbesserung/st3b_koeppl_verbesserung/bin/Debug/st3b_koeppl_verbesserung.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/st3b_koeppl_verbesserung/st3b_koeppl_verbesserung/obj/x86/Debug/st3b_koeppl_verbesserung.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Tests/st3b_koeppl_verbesserung/st3b_koeppl_verbesserung/obj/x86/Debug/st3b_koeppl_verbesserung.exe.mdb
