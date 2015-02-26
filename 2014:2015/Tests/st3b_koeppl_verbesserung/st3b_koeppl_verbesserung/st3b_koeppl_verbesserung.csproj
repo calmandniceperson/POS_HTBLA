@@ -38,6 +38,7 @@
     <Compile Include="Mitarbeiter.cs" />
     <Compile Include="CFirma.cs" />
     <Compile Include="IWTUE.cs" />
+    <Compile Include="CWTAZEventArgs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

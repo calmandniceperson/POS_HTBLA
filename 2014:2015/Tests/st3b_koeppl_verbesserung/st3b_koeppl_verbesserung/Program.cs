@@ -17,7 +17,7 @@ namespace st3b_koeppl_verbesserung
 
 			while(!sr.EndOfStream){ // solange das ende der Datei nicht erreicht ist
 				zs = sr.ReadLine ().Split (' '); // gesplittete Zeile zum Array hinzufuegen
-				Firma.AddMitarbeiter (zs [0] /*name*/, double.Parse (zs [2]) - double.Parse (zs [1]) /*Arbeitszeit des Tages in der Zeile*/);
+				Firma.AddMitarbeiter (zs [0] /*name*/, double.Parse (zs [2].Replace(',', '.')) - double.Parse (zs [1].Replace(',', '.')) /*Arbeitszeit des Tages in der Zeile*/);
 			}
 
 			sr.Close ();

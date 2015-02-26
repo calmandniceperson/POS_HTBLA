@@ -22,8 +22,9 @@ namespace st3b_koeppl_verbesserung
 				FirmenListe [n].WAZ = zeit; //    wird sie bei diesem Mitarbeiter hinzugefuegt
 			}else{
 				FirmenListe.Add (n /*name als key*/, new Mitarbeiter (n, zeit) /*wert*/);
-				FirmenListe [n].TUE += CFirma_TUE;
-				FirmenListe [n].WUE += CFirma_WUE;
+				//FirmenListe [n].UE += CFirma_TUE; --> ALT
+				//FirmenListe [n].UE += CFirma_WUE; --> ALT
+				FirmenListe [n].UE += CFirma_UE;
 			}
 		}
 
@@ -46,7 +47,7 @@ namespace st3b_koeppl_verbesserung
 			return sb.ToString ();
 		}
 
-		void CFirma_TUE(object sender, EventArgs e){
+		/*void CFirma_TUE(object sender, EventArgs e){
 			Console.WriteLine ("Tageszeit ueberschritten!");
 			cntTUE++; // Anzahl an ueberschrittenen Tagesarbeitszeiten der Mitarbeiter erhoehen
 		}
@@ -54,6 +55,16 @@ namespace st3b_koeppl_verbesserung
 		void CFirma_WUE(object sender, EventArgs e){
 			Console.WriteLine ("Wochenzeit ueberschritten!");
 			cntWUE++; // Anzahl an ueberschrittenen Wochenarbeitszeiten der Mitarbeiter erhoehen
+		}*/
+
+		void CFirma_UE(object sender, CWTAZEventArgs e){
+			if (e.W_T) {
+				Console.WriteLine ("Wochenzeitueberschreitung von: {0} Stundenanzahl: {1}", e.Name, e.StdAnz);
+				cntWUE++;
+			} else {
+				Console.WriteLine ("Tageszeitueberschreitung von: {0} Stundenanzahl: {1}", e.Name, e.StdAnz);
+				cntTUE++;
+			}
 		}
 	}
 }
