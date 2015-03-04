@@ -1,0 +1,5 @@
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Kontenbuchungen/CSKontenbuchungen/CSKontenbuchungen/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Kontenbuchungen/CSKontenbuchungen/CSKontenbuchungen/bin/Debug/CSKontenbuchungen.exe.mdb
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Kontenbuchungen/CSKontenbuchungen/CSKontenbuchungen/bin/Debug/CSKontenbuchungen.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Kontenbuchungen/CSKontenbuchungen/CSKontenbuchungen/obj/x86/Debug/CSKontenbuchungen.exe
+/Users/mko/Google Drive/Schule/POS/2014:2015/Beispiele/Kontenbuchungen/CSKontenbuchungen/CSKontenbuchungen/obj/x86/Debug/CSKontenbuchungen.exe.mdb
