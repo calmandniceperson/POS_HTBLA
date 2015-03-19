@@ -1,0 +1,10 @@
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\bin\Debug\CSFormsDB.exe
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\bin\Debug\CSFormsDB.pdb
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\obj\x86\Debug\ResolveAssemblyReference.cache
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\obj\x86\Debug\CSFormsDB.Form1.resources
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\obj\x86\Debug\CSFormsDB.Properties.Resources.resources
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\obj\x86\Debug\GenerateResource.read.1.tlog
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\obj\x86\Debug\GenerateResource.write.1.tlog
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\obj\x86\Debug\CSFormsDB.exe
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\obj\x86\Debug\CSFormsDB.pdb
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSFormsDB\CSFormsDB\bin\Debug\MySql.Data.dll
