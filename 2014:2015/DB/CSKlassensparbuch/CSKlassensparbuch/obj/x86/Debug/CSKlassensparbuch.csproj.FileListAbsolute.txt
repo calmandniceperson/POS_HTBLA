@@ -1,0 +1,10 @@
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\bin\Debug\CSKlassensparbuch.exe
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\bin\Debug\CSKlassensparbuch.pdb
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\bin\Debug\MySql.Data.dll
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\obj\x86\Debug\ResolveAssemblyReference.cache
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\obj\x86\Debug\CSKlassensparbuch.Form1.resources
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\obj\x86\Debug\CSKlassensparbuch.Properties.Resources.resources
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\obj\x86\Debug\GenerateResource.read.1.tlog
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\obj\x86\Debug\GenerateResource.write.1.tlog
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\obj\x86\Debug\CSKlassensparbuch.exe
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSKlassensparbuch\CSKlassensparbuch\obj\x86\Debug\CSKlassensparbuch.pdb
