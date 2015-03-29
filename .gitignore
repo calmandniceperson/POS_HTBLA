@@ -8,3 +8,7 @@
 *.mdb
 
 *.csproj
+
+*.sln
+
+*.suo
