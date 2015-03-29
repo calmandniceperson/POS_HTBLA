@@ -1,3 +1,9 @@
+# this is my solution for the following problem from /r/beginnerprojects:
+# http://www.reddit.com/r/beginnerprojects/comments/29aqox/project_magic_8_ball/
+#
+# Copyright (c) Michael Koeppl
+# 29 March 2015
+
 import time
 import random
 import sys
