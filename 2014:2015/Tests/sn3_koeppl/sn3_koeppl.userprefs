@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="sn3_koeppl/sn3_koeppl.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="sn3_koeppl/Verwaltung.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="sn3_koeppl/Program.cs">
     <Files>
       <File FileName="sn3_koeppl/Program.cs" Line="5" Column="5" />
-      <File FileName="sn3_koeppl/Messstation.cs" Line="26" Column="26" />
-      <File FileName="sn3_koeppl/Verwaltung.cs" Line="4" Column="4" />
-      <File FileName="sn3_koeppl/GrenzwertUeberschrittenEventArgs.cs" Line="5" Column="5" />
-      <File FileName="sn3_koeppl/IMessung.cs" Line="7" Column="7" />
+      <File FileName="sn3_koeppl/Messstation.cs" Line="1" Column="1" />
+      <File FileName="sn3_koeppl/Verwaltung.cs" Line="1" Column="1" />
+      <File FileName="sn3_koeppl/GrenzwertUeberschrittenEventArgs.cs" Line="1" Column="1" />
+      <File FileName="sn3_koeppl/IMessung.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
