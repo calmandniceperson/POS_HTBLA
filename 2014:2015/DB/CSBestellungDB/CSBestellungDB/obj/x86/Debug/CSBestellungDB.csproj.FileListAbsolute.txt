@@ -1,0 +1,5 @@
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSBestellungDB\CSBestellungDB\bin\Debug\CSBestellungDB.exe.config
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSBestellungDB\CSBestellungDB\bin\Debug\CSBestellungDB.exe
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSBestellungDB\CSBestellungDB\bin\Debug\CSBestellungDB.pdb
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSBestellungDB\CSBestellungDB\obj\x86\Debug\CSBestellungDB.exe
+\\psf\Google Drive\Schule\POS\20142015\Beispiele\DB\CSBestellungDB\CSBestellungDB\obj\x86\Debug\CSBestellungDB.pdb
