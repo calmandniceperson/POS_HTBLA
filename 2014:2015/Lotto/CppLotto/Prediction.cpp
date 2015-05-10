@@ -7,12 +7,10 @@
 
 #include "Prediction.h"
 
-Prediction::Prediction() {
+Prediction::Prediction(std::vector<int> p) {
+	pred = p;
 }
 
-Prediction::Prediction(const Prediction& orig) {
+std::string Prediction::PrintAll(){
+	return " lel ";//pred[0] << " " << pred[1] << " " << pred[2] << " " << pred[3] << " " << pred[4] << " " << pred[5];
 }
-
-Prediction::~Prediction() {
-}
-

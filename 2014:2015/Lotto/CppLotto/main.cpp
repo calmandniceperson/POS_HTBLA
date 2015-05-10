@@ -44,8 +44,11 @@ int main(int argc, char** argv) {
 		    std::uniform_int_distribution<int> uniform_dist(min, max);
 		    int output = uniform_dist(e1);
 
-			pred.push_back(output);
+            pred.push_back(output);
 		}
+
+		Prediction p = *new Prediction(pred);
+		std::cout << p.PrintAll() << std::endl;
 
 		for(int j = 0; j < 6; j++){
 			std::cout << pred[j] << std::endl;

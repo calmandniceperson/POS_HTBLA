@@ -5,16 +5,18 @@
  * Created on April 29, 2015, 9:54 PM
  */
 
+#include <vector>
+#include <string>
+
 #ifndef PREDICTION_H
 #define	PREDICTION_H
 
 class Prediction {
 public:
-    Prediction();
-    Prediction(const Prediction& orig);
-    virtual ~Prediction();
+    Prediction(std::vector<int> p);
+    std::string PrintAll();
 private:
-        int digits[6];
+    std::vector<int> pred;
 
 };
 
