@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="EtoHelloWorld.Mac/EtoHelloWorld.Mac.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EtoHelloWorld/MainForm.cs">
+    <Files>
+      <File FileName="EtoHelloWorld/MainForm.cs" Line="30" Column="10" />
+      <File FileName="EtoHelloWorld.Mac/Program.cs" Line="8" Column="28" />
+      <File FileName="EtoHelloWorld.Desktop/Program.cs" Line="11" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

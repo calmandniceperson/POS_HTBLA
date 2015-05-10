@@ -1,0 +1,6 @@
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile259.AssemblyAttribute.cs
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/EtoHelloWorld.dll.mdb
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/EtoHelloWorld.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/obj/Debug/EtoHelloWorld.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/obj/Debug/EtoHelloWorld.dll.mdb
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/Eto.dll
