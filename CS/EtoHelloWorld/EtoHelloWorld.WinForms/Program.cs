@@ -5,14 +5,14 @@
 using System;
 using Eto.Forms;
 
-namespace EtoHelloWorld.Desktop
+namespace EtoHelloWorld.WinForms
 {
 	public class Program
 	{
 		[STAThread]
 		public static void Main (string[] args)
 		{
-			new Application (Eto.Platform.Detect).Run (new MainForm ());
+			new Application (Eto.Platforms.WinForms).Run (new MainForm ());
 		}
 	}
 }

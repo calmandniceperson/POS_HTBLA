@@ -15,10 +15,8 @@ namespace EtoHelloWorld
 	{
 		public MainForm ()
 		{
-			Title = "Hello World!";
+			Title = "Hello, World!";
 			ClientSize = new Size (400, 350);
-
-			var row = new TableRow (null, new Label { Text = "Hello World!" }, null);
 
 			// scrollable region as the main content
 			Content = new Scrollable {
@@ -26,7 +24,7 @@ namespace EtoHelloWorld
 				Content = new TableLayout (
 					null,
 					// row with three columns
-					row,
+					new TableRow (null, new Label { Text = "Hello World!" }, null),
 					null
 				)
 			};

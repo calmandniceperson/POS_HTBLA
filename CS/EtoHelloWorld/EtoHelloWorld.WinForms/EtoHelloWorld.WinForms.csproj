@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{18174116-84BD-4755-A18E-34ACC4763ED3}</ProjectGuid>
+    <ProjectGuid>{889C8D2C-2864-452D-AA5F-269D03EEE879}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EtoHelloWorld.Desktop</RootNamespace>
-    <AssemblyName>EtoHelloWorld.Desktop</AssemblyName>
+    <RootNamespace>EtoHelloWorld.WinForms</RootNamespace>
+    <AssemblyName>EtoHelloWorld.WinForms</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -32,25 +32,17 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="Eto">
       <HintPath>..\packages\Eto.Forms.2.0.7\lib\net45\Eto.dll</HintPath>
-    </Reference>
-    <Reference Include="Eto.Gtk2">
-      <HintPath>..\packages\Eto.Platform.Gtk.2.0.7\lib\net45\Eto.Gtk2.dll</HintPath>
-    </Reference>
-    <Reference Include="Eto.Gtk3">
-      <HintPath>..\packages\Eto.Platform.Gtk3.2.0.7\lib\net45\Eto.Gtk3.dll</HintPath>
     </Reference>
     <Reference Include="Eto.WinForms">
       <HintPath>..\packages\Eto.Platform.Windows.2.0.7\lib\net45\Eto.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Eto.Wpf">
-      <HintPath>..\packages\Eto.Platform.Wpf.2.0.7\lib\net45\Eto.Wpf.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EtoHelloWorld\EtoHelloWorld.csproj">
-      <Project>{3261FF2A-A0B9-4BD0-B15B-C8C874271BCE}</Project>
+      <Project>{86F67F21-546B-41FA-868B-E625545E51E1}</Project>
       <Name>EtoHelloWorld</Name>
     </ProjectReference>
   </ItemGroup>

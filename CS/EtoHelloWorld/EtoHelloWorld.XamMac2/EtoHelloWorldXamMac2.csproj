@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{9C13C7A3-D1B8-4461-BD4A-A8DDA0E59840}</ProjectGuid>
+    <ProjectGuid>{DA339A0D-DA64-456C-AD94-18B8847F2CD8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>EtoHelloWorldXamMac2</RootNamespace>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EtoHelloWorld\EtoHelloWorld.csproj">
-      <Project>{3261FF2A-A0B9-4BD0-B15B-C8C874271BCE}</Project>
+      <Project>{86F67F21-546B-41FA-868B-E625545E51E1}</Project>
       <Name>EtoHelloWorld</Name>
     </ProjectReference>
   </ItemGroup>

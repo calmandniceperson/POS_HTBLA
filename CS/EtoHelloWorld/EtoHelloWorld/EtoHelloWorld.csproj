@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{3261FF2A-A0B9-4BD0-B15B-C8C874271BCE}</ProjectGuid>
+    <ProjectGuid>{86F67F21-546B-41FA-868B-E625545E51E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>EtoHelloWorld</RootNamespace>
     <AssemblyName>EtoHelloWorld</AssemblyName>
