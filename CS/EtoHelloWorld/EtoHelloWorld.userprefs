@@ -1,8 +1,8 @@
-﻿<Properties StartupItem="EtoHelloWorld.Mac/EtoHelloWorld.Mac.csproj">
+﻿<Properties StartupItem="EtoHelloWorld.Mac/EtoHelloWorld.Mac.csproj" MonoDevelop.MonoMac.LastXamMacNagTime="5/10/2015 2:13:18 PM">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="EtoHelloWorld/MainForm.cs">
     <Files>
-      <File FileName="EtoHelloWorld/MainForm.cs" Line="29" Column="6" />
+      <File FileName="EtoHelloWorld/MainForm.cs" Line="14" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

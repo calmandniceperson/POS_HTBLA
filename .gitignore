@@ -1,0 +1,9 @@
+*.mdb
+
+*.exe
+
+*.csproj
+
+*.sln
+
+*.suo

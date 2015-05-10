@@ -4,3 +4,14 @@
 /Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/obj/Debug/EtoHelloWorld.dll
 /Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/obj/Debug/EtoHelloWorld.dll.mdb
 /Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/Eto.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/mscorlib.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.Core.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.Dynamic.Runtime.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.Linq.Queryable.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.Diagnostics.Tools.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.ComponentModel.EventBasedAsync.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.Net.Primitives.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.Net.Requests.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.Net.NetworkInformation.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld/bin/Debug/System.Text.RegularExpressions.dll

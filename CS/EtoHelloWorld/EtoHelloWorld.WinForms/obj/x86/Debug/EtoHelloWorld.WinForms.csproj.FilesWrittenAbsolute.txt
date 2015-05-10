@@ -1,0 +1,9 @@
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/bin/Debug/EtoHelloWorld.WinForms.exe.mdb
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/bin/Debug/EtoHelloWorld.WinForms.exe
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/obj/x86/Debug/EtoHelloWorld.WinForms.exe
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/obj/x86/Debug/EtoHelloWorld.WinForms.exe.mdb
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/bin/Debug/Eto.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/bin/Debug/Eto.WinForms.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/bin/Debug/EtoHelloWorld.dll
+/Users/mko/Documents/workspace/POS_HTBLA/CS/EtoHelloWorld/EtoHelloWorld.WinForms/bin/Debug/EtoHelloWorld.dll.mdb
