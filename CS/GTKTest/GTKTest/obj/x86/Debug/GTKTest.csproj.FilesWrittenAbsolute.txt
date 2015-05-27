@@ -1,0 +1,6 @@
+/Users/mko/Documents/workspace/POS_HTBLA/CS/GTKTest/GTKTest/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mko/Documents/workspace/POS_HTBLA/CS/GTKTest/GTKTest/obj/x86/Debug/GTKTest.gtk-gui.gui.stetic
+/Users/mko/Documents/workspace/POS_HTBLA/CS/GTKTest/GTKTest/bin/Debug/GTKTest.exe.mdb
+/Users/mko/Documents/workspace/POS_HTBLA/CS/GTKTest/GTKTest/bin/Debug/GTKTest.exe
+/Users/mko/Documents/workspace/POS_HTBLA/CS/GTKTest/GTKTest/obj/x86/Debug/GTKTest.exe
+/Users/mko/Documents/workspace/POS_HTBLA/CS/GTKTest/GTKTest/obj/x86/Debug/GTKTest.exe.mdb
