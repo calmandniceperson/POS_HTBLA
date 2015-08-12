@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 
   if(argc != 2)
   {
-    fprintf(stderr,"usage: ./<name> hostname\n");
+    fprintf(stderr,"Not enough arguments.\n");
+    printf("usage: %s <hostname>\n", argv[0]);
     return 1;
   }
 
