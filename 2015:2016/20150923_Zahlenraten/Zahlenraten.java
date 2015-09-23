@@ -6,13 +6,15 @@ public class Zahlenraten {
     Random r = new Random();
     int repeat = 2, guess, rnum;
     do {
+      // clear console
+      System.out.println("\033[H\033[2J");
       // header
-      System.out.println("\t=====ZAHLENRATEN=====");
-      System.out.println("Sie muessen eine zufaellige Zahl\nzwischen 1 und 1000 erraten");
+      System.out.println("=====ZAHLENRATEN=====");
+      System.out.println("Sie muessen eine zufaellige Zahl\nzwischen 1 und 1000 erraten.");
       System.out.println("Sie haben 10 Versuche.");
+      System.out.println("=====================");
       // generate random number
       rnum = r.nextInt(1000 - 1) + 0;
-      System.out.println(rnum);
       for(int i = 1; i <= 10; i++) {
         System.out.print(i + ". Versuch: ");
         guess = s.nextInt();
