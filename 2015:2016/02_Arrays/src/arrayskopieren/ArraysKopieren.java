@@ -1,6 +1,6 @@
 package arrayskopieren;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class ArraysKopieren {
 	public static void main(String[] args) {
