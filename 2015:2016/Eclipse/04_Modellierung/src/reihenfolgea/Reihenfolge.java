@@ -1,4 +1,4 @@
-package reihenfolgeb;
+package reihenfolgea;
 public class Reihenfolge {
 	int dyna = Reihenfolge.get(1);
 
@@ -16,7 +16,8 @@ public class Reihenfolge {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new Reihenfolge();
+		System.out.println("in der main vor objekt");
+		//new Reihenfolge();
 		System.out.println("in der main nach objekt");
 	}
 	
@@ -25,7 +26,7 @@ public class Reihenfolge {
 	}
 	
 	{
-		System.out.println("Block");
+		System.out.println("im Block");
 	}
 
 }
