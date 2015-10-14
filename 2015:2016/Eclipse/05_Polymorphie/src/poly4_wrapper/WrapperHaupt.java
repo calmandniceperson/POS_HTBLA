@@ -13,19 +13,22 @@ public class WrapperHaupt {
 		 * BLOCK 2 - 1232435 durchlaeufe mit neuerstellung
 		 */
 		// autoboxing
+		Integer copy_iw2;
 		startTime = System.currentTimeMillis();
 		for(int i = 0; i < 1232435; i++) {
 			Integer iw2 = i;
+			copy_iw2 = iw2;
 		}
 		endTime = System.currentTimeMillis();
 		long dauer2 = endTime - startTime;
 		System.out.println("\n1232435 Autoboxings mit wiederholter Erstellung des Wrappers: " + dauer2 + "ms");
 		
 		// boxing
-		Integer iw4;
+		Integer iw4, copy_iw4;
 		startTime = System.currentTimeMillis();
 		for(int i = 0; i < 342352352; i++) {
 			iw4 = Integer.valueOf(i);
+			copy_iw4 = iw4;
 		}
 		endTime = System.currentTimeMillis();
 		long dauer3 = endTime - startTime;
@@ -33,8 +36,10 @@ public class WrapperHaupt {
 		System.out.println("Autoboxing war um " + (dauer3-dauer2) + "ms schneller als Boxing.");
 		
 		startTime = System.currentTimeMillis();
+		int iw2_copy;
 		for(int i = 0; i < 1232435; i++) {
 			int iw2 = i;
+			iw2_copy = iw2;
 		}
 		endTime = System.currentTimeMillis();
 		long dauer4 = endTime - startTime;
@@ -45,20 +50,22 @@ public class WrapperHaupt {
 		 * BLOCK 3 - 342352352 durchlaeufe ohne neuerstellung
 		 */
 		// autoboxing
-		Integer iw3;
+		Integer iw3, copy_iw3;
 		startTime = System.currentTimeMillis();
 		for(int i = 0; i < 342352352; i++) {
 			iw3 = i;
+			copy_iw3 = iw3;
 		}
 		endTime = System.currentTimeMillis();
 		long dauer5 = endTime - startTime;
 		System.out.println("\n342352352 Autoboxings ohne wiederholter Erstellung des Wrappers: " + dauer5 + "ms");
 		
 		// boxing
-		Integer iw5;
+		Integer iw5, copy_iw5;
 		startTime = System.currentTimeMillis();
 		for(int i = 0; i < 342352352; i++) {
 			iw5 = Integer.valueOf(i);
+			copy_iw5 = iw5;
 		}
 		endTime = System.currentTimeMillis();
 		long dauer6 = endTime - startTime;
@@ -66,10 +73,11 @@ public class WrapperHaupt {
 		System.out.println("Autoboxing war um " + (dauer6-dauer5) + "ms schneller als Boxing.");
 		
 		// int
-		int iw3_int;
+		int iw3_int, copy_iw3_int;
 		startTime = System.currentTimeMillis();
 		for(int i = 0; i < 342352352; i++) {
 			iw3_int = i;
+			copy_iw3_int = iw3_int;
 		}
 		endTime = System.currentTimeMillis();
 		long dauer7 = endTime - startTime;
