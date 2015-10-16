@@ -1,3 +1,4 @@
+package aufgabe2;
 
 public class TestEnums {
 	public static void main(String[] args) {

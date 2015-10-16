@@ -1,3 +1,4 @@
+package aufgabe2;
 
 public class FarbkarteOld {
 	public final static int KFARBE_ROT = 0;

@@ -1,3 +1,4 @@
+package aufgabe2;
 
 public class FarbkarteNew {
 	public enum Farbe {
