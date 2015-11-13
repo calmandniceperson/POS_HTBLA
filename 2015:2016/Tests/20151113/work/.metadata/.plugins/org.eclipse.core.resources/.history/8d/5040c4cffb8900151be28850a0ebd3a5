@@ -1,0 +1,18 @@
+package koeppl;
+
+public class Punkt {
+	private int x, y;
+	
+	public String toString() {
+		return null;
+	}
+	
+	public int getX() {
+		return x;
+	}
+	
+	public int getY() {
+		return y;
+	}
+	
+}

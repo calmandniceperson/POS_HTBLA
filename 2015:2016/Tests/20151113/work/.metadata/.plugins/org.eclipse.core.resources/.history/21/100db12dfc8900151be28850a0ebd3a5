@@ -1,0 +1,14 @@
+package koeppl;
+
+public class Strecke {
+	private Punkt p1, p2;
+	
+	Strecke(Punkt p1, Punkt p2) {
+		this.p1 = p1;
+		this.p2 = p2;
+	}
+	
+	public double length() {
+		return 0;
+	}
+}

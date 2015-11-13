@@ -1,0 +1,11 @@
+package koeppl;
+
+public class StreckenTest {
+	
+	Strecke[] strecken;
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

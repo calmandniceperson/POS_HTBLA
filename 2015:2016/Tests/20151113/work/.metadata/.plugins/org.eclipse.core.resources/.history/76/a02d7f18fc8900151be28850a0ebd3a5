@@ -1,0 +1,5 @@
+package koeppl;
+
+public class Strecke {
+	private Punkt p1, p2;
+}
