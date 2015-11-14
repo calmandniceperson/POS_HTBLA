@@ -13,7 +13,9 @@ public class Strecke {
 	}
 	
 	public double length() {
-		return (p2.getX() - p1.getX()) + (p2.getY() - p1.getY());
+		// a^2 + b^2 = c^2
+		// return c^2
+		return Math.sqrt((p2.getX() - p1.getX()^2) + (p2.getY() - p1.getY()^2));
 	}
 	
 	public String toString() {
