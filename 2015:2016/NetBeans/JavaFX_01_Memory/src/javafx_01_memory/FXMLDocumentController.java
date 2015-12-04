@@ -66,9 +66,8 @@ public class FXMLDocumentController {
     private Alert alert;
 
     private Memory mem;
-    private MemoryRectangle 
-            rec /*variable for generating rectangles*/, 
-            sel1 /*first selected rectangle*/, 
+    private MemoryRectangle rec /*variable for generating rectangles*/,
+            sel1 /*first selected rectangle*/,
             sel2 /*second selected rectangle*/;
     /*
      * Holds the current user (1 or 2)
@@ -85,10 +84,10 @@ public class FXMLDocumentController {
         // generate new object of
         // the Memory class with 2 players
         mem = new Memory(2 /*players*/);
-        
+
         // set current player to 1
         currentPlayer = 1;
-        
+
         // Since the first turn is player1's turn,
         // set the color of player1's name field to green and 
         // player2's field to white and
@@ -101,7 +100,7 @@ public class FXMLDocumentController {
         // Get number of columns and rows
         int numColumns = buttongridpane.getColumnConstraints().size();
         int numRows = buttongridpane.getRowConstraints().size();
-        
+
         // Loop through the rows and in each row
         // through the columns
         for (int i = 0; i <= numRows - 1; i++) {
@@ -114,14 +113,14 @@ public class FXMLDocumentController {
                 rec.setStroke(Color.BLACK);
                 rec.setHeight(60);
                 rec.setWidth(60);
-                
+
                 // Add an event listener to the rectangles
                 rec.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                     MemoryRectangle source = (MemoryRectangle) e.getSource();
                     // On click set the fill of the rectangle to 
                     // the assigned color (from colorList)
                     source.setFill(mem.getColorForRect(source));
-                    
+
                     // If sel1 is null, assign the rectangle
                     // the user clicked on to it
                     // otherwise assign it to sel2
@@ -142,7 +141,7 @@ public class FXMLDocumentController {
                     } else { // if sel1 has already been set
                         // set sel2
                         sel2 = source;
-                        
+
                         // Check whether the second field has already
                         // been revealed
                         if (sel2.isUsed()) {
@@ -154,7 +153,7 @@ public class FXMLDocumentController {
                             alert.showAndWait();
                             sel2 = null;
                         }
-                        
+
                         // Check whether the 2 buttons' colors match
                         // If they do, set both to used and
                         // then set the selected objects to null again
@@ -181,12 +180,23 @@ public class FXMLDocumentController {
                                 alert.initStyle(StageStyle.UTILITY);
                                 alert.setTitle("Sieg!");
                                 alert.setHeaderText("Herzlichen Glückwunsch!");
-                                if(currentPlayer == 1) {
+                                if (currentPlayer == 1) {
                                     alert.setContentText(p1nametextfield.getText() + " gewinnt!");
                                 } else if (currentPlayer == 2) {
                                     alert.setContentText(p2nametextfield.getText() + " gewinnt!");
                                 }
                                 alert.showAndWait();
+                            }
+                            // If both scores match and the scores are ((numRows*numColumns)/2)/2)
+                            // announce a tie!
+                            if ((scorelabel_p1.getText().equals(scorelabel_p2.getText())) && Integer.parseInt(scorelabel_p1.getText()) == ((numRows * numColumns) / 4)) {
+                                alert = new Alert(Alert.AlertType.INFORMATION);
+                                alert.initStyle(StageStyle.UTILITY);
+                                alert.setTitle("Sieg!");
+                                alert.setHeaderText("2 glückliche Gewinner!");
+                                alert.setContentText("Herzlichen Glückwunsch!");
+                                alert.showAndWait();
+                                sel2 = null;
                             }
                         } else if (sel1.equals(sel2)) { // if the same field has been selected twice (to punish "cheating")
                             alert = new Alert(Alert.AlertType.INFORMATION);
