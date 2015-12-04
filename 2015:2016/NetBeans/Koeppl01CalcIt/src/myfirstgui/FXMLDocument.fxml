@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="154.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myfirstgui.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="generateButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleGenerateOnClick" text="Generate" />
+      <TextField fx:id="calctextarea" layoutX="77.0" layoutY="66.0" />
+      <Label fx:id="calclabel" alignment="CENTER" contentDisplay="CENTER" layoutX="98.0" layoutY="44.0" prefHeight="17.0" prefWidth="126.0" />
+      <Button fx:id="checkbutton" layoutX="132.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleCheckOnClick" text="Check" />
+      <Label fx:id="resultlabel" alignment="CENTER" contentDisplay="CENTER" layoutX="98.0" layoutY="96.0" prefHeight="17.0" prefWidth="126.0" />
+    </children>
+</AnchorPane>

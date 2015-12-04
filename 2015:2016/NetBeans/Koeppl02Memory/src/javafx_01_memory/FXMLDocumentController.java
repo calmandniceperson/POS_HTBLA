@@ -21,6 +21,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.HPos;
+import javafx.geometry.VPos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -81,6 +83,10 @@ public class FXMLDocumentController {
      */
     @FXML
     void handleStartButtonClick(ActionEvent event) {
+        runGame();
+    }
+    
+    void runGame() {
         // generate new object of
         // the Memory class with 2 players
         mem = new Memory(2 /*players*/);
@@ -103,8 +109,8 @@ public class FXMLDocumentController {
 
         // Loop through the rows and in each row
         // through the columns
-        for (int i = 0; i <= numRows - 1; i++) {
-            for (int j = 0; j <= numColumns - 1; j++) {
+        for (int i = 0; i <= numColumns - 1; i++) {
+            for (int j = 0; j <= numRows - 1; j++) {
                 // Create a new rectangle with
                 // grey fill (the color is only added
                 // on button click
@@ -113,6 +119,9 @@ public class FXMLDocumentController {
                 rec.setStroke(Color.BLACK);
                 rec.setHeight(60);
                 rec.setWidth(60);
+                
+                GridPane.setHalignment(rec, HPos.CENTER);
+                GridPane.setValignment(rec, VPos.CENTER);
 
                 // Add an event listener to the rectangles
                 rec.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
@@ -175,7 +184,7 @@ public class FXMLDocumentController {
                             }
                             if (mem.getPlayerById(currentPlayer).getScore() > ((numColumns * numRows) / 4)) {
                                 // Player won found more than half
-                                // of the combination --> won
+                                // of the combination --> won --> reset
                                 alert = new Alert(Alert.AlertType.INFORMATION);
                                 alert.initStyle(StageStyle.UTILITY);
                                 alert.setTitle("Sieg!");
@@ -186,9 +195,10 @@ public class FXMLDocumentController {
                                     alert.setContentText(p2nametextfield.getText() + " gewinnt!");
                                 }
                                 alert.showAndWait();
+                                runGame();
                             }
                             // If both scores match and the scores are ((numRows*numColumns)/2)/2)
-                            // announce a tie!
+                            // announce a tie and reset
                             if ((scorelabel_p1.getText().equals(scorelabel_p2.getText())) && Integer.parseInt(scorelabel_p1.getText()) == ((numRows * numColumns) / 4)) {
                                 alert = new Alert(Alert.AlertType.INFORMATION);
                                 alert.initStyle(StageStyle.UTILITY);
@@ -197,13 +207,14 @@ public class FXMLDocumentController {
                                 alert.setContentText("Herzlichen Glückwunsch!");
                                 alert.showAndWait();
                                 sel2 = null;
+                                runGame();
                             }
                         } else if (sel1.equals(sel2)) { // if the same field has been selected twice (to punish "cheating")
-                            alert = new Alert(Alert.AlertType.INFORMATION);
+                            /*alert = new Alert(Alert.AlertType.INFORMATION);
                             alert.initStyle(StageStyle.UTILITY);
                             alert.setTitle("Fehler");
                             alert.setContentText("Sie muessen ein anderes Feld waehlen!");
-                            alert.showAndWait();
+                            alert.showAndWait();*/
                             sel2 = null;
                         } else {
                             // If the colors did not match, 
