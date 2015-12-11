@@ -1,0 +1,10 @@
+50 fuenfte Zeile
+40 vierte Zeile
+00 nullte Zeile
+10 erste Zeile
+60 sechste Zeile
+90 neunte Zeile
+70 siebte Zeile
+30 dritte Zeile
+20 zweite Zeile
+80 achte Zeile
