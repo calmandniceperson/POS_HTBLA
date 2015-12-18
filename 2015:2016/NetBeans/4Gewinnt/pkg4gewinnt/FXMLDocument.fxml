@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkg4gewinnt.FXMLDocumentController">
+   <children>
+      <!--<Button fx:id="startbutton" layoutX="11.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleStartButtonAction" text="Start" />-->
+      <Label fx:id="playerlabel" alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="14.0" text="Spieler   ist am Zug." />
+      <AnchorPane id="AnchorPane" fx:id="mainanchorpane" prefHeight="435.0" prefWidth="693.0">
+         <children>
+            <Label fx:id="aboutlabel" layoutX="12.0" layoutY="413.0" onMousePressed="#handleAboutClick" text="About" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
