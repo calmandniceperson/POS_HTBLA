@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.myidea.inet.myidea.MainActivity">
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="COW"
+        android:id="@+id/cowButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onCowButtonClick"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="CHICKEN"
+        android:id="@+id/chickenButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onChickenButtonClick"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="GOAT"
+        android:id="@+id/goatButton"
+        android:onClick="onGoatButtonClick"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="DONKEY"
+        android:id="@+id/donkeyButton"
+        android:onClick="onDonkeyButtonClick"
+        android:layout_alignTop="@+id/goatButton"
+        android:layout_alignLeft="@+id/chickenButton"
+        android:layout_alignStart="@+id/chickenButton" />
+</RelativeLayout>
