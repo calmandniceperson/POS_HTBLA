@@ -74,7 +74,7 @@ fn main() {
         io::stdin().read_line(&mut guess)
             .expect("Failed to read line");
 
-        // parse() knows which kind of number to convert to string to
+        // parse() knows which kind of number to convert the string to
         // because we specify that we want the binding guess to be a
         // u32 (unsigned, 32 bit integer)
         let guess: u32 = match guess.trim().parse() {
