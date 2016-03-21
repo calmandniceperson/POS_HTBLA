@@ -1,0 +1,6 @@
+[package]
+name = "patterns_pitfall"
+version = "0.1.0"
+authors = ["mkocs <mko.mko31@gmail.com>"]
+
+[dependencies]

@@ -1,0 +1,6 @@
+[package]
+name = "patterns_multiplepatterns"
+version = "0.1.0"
+authors = ["mkocs <mko.mko31@gmail.com>"]
+
+[dependencies]
