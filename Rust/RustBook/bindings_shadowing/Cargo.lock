@@ -1,0 +1,4 @@
+[root]
+name = "bindings_shadowing"
+version = "0.1.0"
+
