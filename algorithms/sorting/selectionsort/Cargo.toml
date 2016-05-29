@@ -1,0 +1,7 @@
+[package]
+name = "selectionsort"
+version = "0.1.0"
+authors = ["Michael Köppl <mko.mko31@gmail.com>"]
+
+[dependencies]
+chrono = "0.2"
