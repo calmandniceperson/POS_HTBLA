@@ -2,9 +2,9 @@
 // Selection sort
 // 27 May 2016
 
-extern crate chrono;
+extern crate rand;
 
-use chrono::{UTC, DateTime};
+use rand::Rng;
 
 fn out_prt(f: &Vec<i32>) {
     for x in 0..f.len() {
@@ -13,9 +13,10 @@ fn out_prt(f: &Vec<i32>) {
     println!("\n");
 }
 
-fn sort(mut f: &mut Vec<i32>) {
+fn sort(mut f: &mut Vec<i32>) -> i32 {
     let mut min;
     let mut temp;
+    let mut count: i32 = 0;
     for i in 0..f.len() {
         min = i;
         for j in i+1..f.len() {
@@ -27,17 +28,59 @@ fn sort(mut f: &mut Vec<i32>) {
             temp = f[i];
             f[i] = f[min];
             f[min] = temp;
+            count = count + 1;
         }
     }
+    return count;
+}
+
+fn create(s_method: i32, size: i32) -> Vec<i32> {
+    let mut field: Vec<i32> = vec![0; 10];
+    match s_method {
+        0 => {
+            for i in 0..size {
+                field[i as usize] = i; 
+            }
+        },
+        1 => {
+            for i in 0..size {
+                field[i as usize] = size - i;
+            }
+        },
+        _ => {
+            for i in 0..size {
+                //field[i] = 
+                let mut rng = rand::thread_rng();
+                if rng.gen() {
+                    field[i as usize] = rng.gen::<i32>();
+                }
+            }
+        }
+    }
+    return field;
 }
 
 fn main() {
     let mut field = vec![7, 3, 4, 7, 2, 1, 8];
-    let localt_1: DateTime<UTC> = UTC::now();
     sort(&mut field);
-    let localt_2: DateTime<UTC> = UTC::now();
-    println!("{}", localt_2 - localt_1);
     out_prt(&mut field);
+
+    let mut best: i32 = 0;
+    let mut worst: i32 = 0;
+    let mut avg: i32 = 0;
+    for _ in 0..200 {
+        let mut f_best = &mut create(0, 10);
+        let mut f_worst = &mut create(1, 10);
+        let mut f_avg = &mut create(2, 10);
+
+        best = best + sort(f_best);
+        worst = worst + sort(f_worst);
+        avg = avg + sort(f_avg);
+    }
+
+    println!("Avg. best: {}", best/200);
+    println!("Avg. avg: {}", worst/200);
+    println!("Avg. worst: {}", avg/200);
 }
 
 // Rechenaufwand O-Notation: O(n^2), weil zwei ineinander verschachtelte
