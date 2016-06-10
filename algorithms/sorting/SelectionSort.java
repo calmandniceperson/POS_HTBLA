@@ -2,39 +2,29 @@ class SelectionSort {
     public static int [] field = {7, 3, 4, 5, 3, 8, 1};
 
     public static void main(String[] args) {
-        //out(field);
-        //sort(field);
-        //out(field);
-
-        //out(create(0, 10));
-        //out(create(1, 10));
-        //out(create(2, 10));
-        
-        //sort(create(0, 10));
-        //sort(create(1, 10));
-        //sort(create(2, 10));
-        
-        int best = 0, worst = 0, avg = 0;
-
-        for (int i = 0; i < 200; i++) {
-            int [] bestCase = create(0, 10);
-            int [] worstCase = create(1, 10);
-            int [] avgCase = create(2, 10);
-
-            //out(bestCase);
-            best += sort(bestCase);
-
-            //out(worstCase);
-            worst += sort(worstCase);
-
-            //out(avgCase);
-            avg += sort(avgCase);
+        if(args.length < 1) {
+            return;
         }
+        
+        int count = 0;
 
-        // Generate analysis table
-        System.out.println("Avg. best: " + best/200);
-        System.out.println("Avg. worst: " + worst/200);
-        System.out.println("Avg. avg.: " + avg/200);
+        int[] sort_arr = create(0, Integer.parseInt(args[0]));
+        int[] back_arr = create(1, Integer.parseInt(args[0]));
+        int[] rand_arr = create(2, Integer.parseInt(args[0]));
+
+        count += sort(sort_arr);
+        System.out.println("Sorted sort count: " + count);
+        count = 0;
+
+        count += sort(back_arr);
+        System.out.println("Backwards sort count: " + count);
+        count = 0;
+
+        //for(int i = 0; i <= 9999; i++) {
+            int[] clone = rand_arr;
+            count += sort(clone);
+        //}
+        System.out.println("Random sort count: " + count);
     }
 
     private static int sort(int[] f) {
