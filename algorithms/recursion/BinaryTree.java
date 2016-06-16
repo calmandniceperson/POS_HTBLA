@@ -50,6 +50,7 @@ class BinaryTree {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        try {
         do {
             System.out.print("Enter a number: ");
             int num = Integer.parseInt(input.next());
@@ -60,6 +61,9 @@ class BinaryTree {
             }
             System.out.println("Do you want to enter another number? (y/n)");
         } while(input.next().toLowerCase().charAt(0) == 'y');
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         out(root);
     }
 }
