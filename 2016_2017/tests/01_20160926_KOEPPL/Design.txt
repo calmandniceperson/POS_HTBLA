@@ -1,0 +1,6 @@
+* Directory info der root directory (datavz) holen
+* Information an rekursive Methode uebergeben
+* Methode liest alle Dateien der Directory und gibt ihre Namen aus
+* Methode addiert .Length Wert (bytes) zur Summe der Dateilaengen (Speicherbedarf)
+* Methode durchlaeuft alle Subdirectories der gegebenen Directories und ruft fuer jede davon die Methode rekursiv auf
+* Ausgabe der Summe an Laengen (Speicherbedarf)
