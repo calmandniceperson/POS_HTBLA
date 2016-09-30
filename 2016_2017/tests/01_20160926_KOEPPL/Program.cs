@@ -12,15 +12,15 @@ namespace ConsoleApplication
         private static void DoSubDir(DirectoryInfo dirInfo)
         {
             FileInfo[] fInfo = dirInfo.GetFiles();
-            if (fInfo.Length == 0)
-                return;
-            foreach(FileInfo f in fInfo)
-            {
-                // macOS fix
-                if (f.Name != ".DS_Store")
+            if (fInfo.Length > 0) {
+                foreach(FileInfo f in fInfo)
                 {
-                    Console.WriteLine(f.Name);
-                    storageUsage += f.Length;
+                    // macOS fix
+                    if (f.Name != ".DS_Store")
+                    {
+                        Console.WriteLine(f.Name);
+                        storageUsage += f.Length;
+                    }
                 }
             }
             var subDirInfo = dirInfo.GetDirectories();
