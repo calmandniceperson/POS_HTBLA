@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Datei1>
+  <Zufall>
+    <Min>1</Min>
+    <Max>6</Max>
+    <Anzahl>100</Anzahl>
+  </Zufall>
+</Datei1>
+
