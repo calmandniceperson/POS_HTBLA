@@ -1,0 +1,5 @@
+C:\Users\michael.koeppl\Desktop\tests\ShiftRegister_Koeppl\ShiftRegister\bin\Debug\ShiftRegister.dll
+C:\Users\michael.koeppl\Desktop\tests\ShiftRegister_Koeppl\ShiftRegister\bin\Debug\ShiftRegister.pdb
+C:\Users\michael.koeppl\Desktop\tests\ShiftRegister_Koeppl\ShiftRegister\obj\Debug\ShiftRegister.csprojResolveAssemblyReference.cache
+C:\Users\michael.koeppl\Desktop\tests\ShiftRegister_Koeppl\ShiftRegister\obj\Debug\ShiftRegister.dll
+C:\Users\michael.koeppl\Desktop\tests\ShiftRegister_Koeppl\ShiftRegister\obj\Debug\ShiftRegister.pdb
