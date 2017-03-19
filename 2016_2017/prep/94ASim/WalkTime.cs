@@ -10,6 +10,7 @@ namespace _94ASim
         public WalkTime(int predictedTime)
         {
             PredictedTime = predictedTime;
+            TimeWalked = 0;
         }
     }
 }

@@ -46,16 +46,19 @@ namespace _94ASim
         public int GetNumberOfArrivers()
         {
             int count = 0;
-            for (int i = 0; i < listOfPeople.Count; i++)
+
+            // Traverse backwards because the remove action otherwise
+            // removes the wrong elements because of the changed index.
+            for (int i = listOfPeople.Count - 1; i >= 0; i--)
             {
                 // If the time the person has already been walking
                 // matches the time it takes them to arrive there,
                 // we add them to the queue at the bus stop and remove
                 // them from the list of people that are on their way.
-                if (listOfPeople[i].PredictedTime == listOfPeople[i].TimeWalked)
+                if (listOfPeople[i].TimeWalked >= listOfPeople[i].PredictedTime)
                 {
                     count++;
-                    listOfPeople.Remove(listOfPeople[i]);
+                    listOfPeople.RemoveAt(i);
                 }
             }
             return count;
