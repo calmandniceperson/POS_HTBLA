@@ -1,0 +1,8 @@
+/home/inet/workspace/school/POS_HTBLA/2016_2017/prep/94ASim/bin/Debug/netcoreapp1.0/94ASim.deps.json
+/home/inet/workspace/school/POS_HTBLA/2016_2017/prep/94ASim/bin/Debug/netcoreapp1.0/94ASim.runtimeconfig.json
+/home/inet/workspace/school/POS_HTBLA/2016_2017/prep/94ASim/bin/Debug/netcoreapp1.0/94ASim.runtimeconfig.dev.json
+/home/inet/workspace/school/POS_HTBLA/2016_2017/prep/94ASim/bin/Debug/netcoreapp1.0/94ASim.dll
+/home/inet/workspace/school/POS_HTBLA/2016_2017/prep/94ASim/bin/Debug/netcoreapp1.0/94ASim.pdb
+/home/inet/workspace/school/POS_HTBLA/2016_2017/prep/94ASim/obj/Debug/netcoreapp1.0/94ASim.AssemblyInfo.cs
+/home/inet/workspace/school/POS_HTBLA/2016_2017/prep/94ASim/obj/Debug/netcoreapp1.0/94ASim.dll
+/home/inet/workspace/school/POS_HTBLA/2016_2017/prep/94ASim/obj/Debug/netcoreapp1.0/94ASim.pdb
