@@ -22,17 +22,20 @@ namespace _94ASim
                 {
                     u2PeopleCount = U2.Instance.Arrive(timePassed);
                     
-                    // Add the people who were on their way to the bus station.
+                    // Add the people who were on their way and already arrived to the bus station.
                     // We can just ignore the fact that on minute 0 this happens as well
                     // since the number of people is 0 in the beginning anyway, so we're
                     // basically adding 0 people to a queue length of 0 at the bus station.
                     // Math game is on fleek.
-                    BusStop.Instance.QueueLength += WalkWay.Instance.PeopleCount;
-                    Console.WriteLine($"{WalkWay.Instance.PeopleCount} students arrived at the bus stop.");
+                    // This method adds the people who already arrived (people can take 3 or 7 minutes
+                    // to arrive) to the bus stop's queue.
+                    int numberOfArrivers = WalkWay.Instance.GetNumberOfArrivers();
+                    BusStop.Instance.QueueLength += numberOfArrivers;
+                    Console.WriteLine($"{numberOfArrivers} students arrived at the bus stop.");
 
                     // Send the number of people that just left the subway on their way to
                     // the bus station.
-                    WalkWay.Instance.PeopleCount = u2PeopleCount;
+                    WalkWay.Instance.AddPeople(u2PeopleCount);
                 }
 
                 if (timePassed % 5 == 0 && timePassed != 0) // Every 5 minutes, but without minute 0
@@ -54,6 +57,9 @@ namespace _94ASim
                     // Drops off the students.
                     Bus.Instance.DropOff();
                 }
+
+                Bus.Instance.TimeSinceDeparture++;
+                WalkWay.Instance.IncreaseTicks();
 
                 time = time.AddMinutes(1);
             }

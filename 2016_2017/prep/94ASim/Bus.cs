@@ -39,7 +39,7 @@ namespace _94ASim
 
         public void DropOff()
         {
-            Console.WriteLine($"Dropped {passengerCount} students of at school!");
+            Console.WriteLine($"Dropped {passengerCount} students off at school!");
         }
     }
 }
