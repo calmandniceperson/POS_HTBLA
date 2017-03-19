@@ -1,7 +1,6 @@
 // Author(s): Michael Koeppl
 
 using System.Collections.Generic;
-using System;
 
 namespace _94ASim
 {
