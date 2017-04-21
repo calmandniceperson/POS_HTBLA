@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{B2B8E351-1605-4397-BAF7-B32E283F96AE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FindSteganos/ImageComparer.cs">
+    <Files>
+      <File FileName="FindSteganos/Program.cs" Line="23" Column="91" />
+      <File FileName="FindSteganos/ImageReader.cs" Line="17" Column="3" />
+      <File FileName="FindSteganos/ImageComparer.cs" Line="6" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FindSteganos PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
